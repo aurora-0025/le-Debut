@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap');
+
+* {
+  cursor: url('./assets/cursor.png'), default !important;	
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  --torch-red: #ff002a;
+  --lego-yellow: #ffdb08;
+  --moon-mist: #e2dacf
+}
+
+body {
+  background-color: var(--moon-mist);
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body > #root > div {
+  min-height: 100vh;
+}
+
+.unselectable, img {
+  /* For Opera and <= IE9, we need to add unselectable="on" attribute onto each element */
+  /* Check this site for more details: http://help.dottoro.com/lhwdpnva.php */
+  -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+  -webkit-user-select: none;
+  -ms-user-select: none; /* From IE10 only */
+  user-select: none; /* Not valid CSS yet, as of July 2012 */
+
+  -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+}
+
+*,*:focus,*:hover{
+  outline:none;
+}
+
+/* https://github.com/werbhq/definewebsite/blob/master/src/pages/define.css */
+
+@media (hover: hover) {
+  /* width */
+  ::-webkit-scrollbar {
+      width: 30px;
+      display: block;
+      z-index: 999;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+      background-color: var(--torch-red)
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      /* background: var(--lego-yellow); */
+      background: url('./assets/scroll_bar.png');
+  }
+}
