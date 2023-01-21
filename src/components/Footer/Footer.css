@@ -1,0 +1,65 @@
+.Footer {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 50px;
+}
+.Footer > .quickLinks {
+    display: flex;
+    flex-direction: column;
+}
+.Footer > .quickLinks > a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.Footer > .quickLinks > p {
+    cursor: pointer;
+}
+
+.Footer > .quickLinks > p:hover, .Footer > .quickLinks > a:hover {
+    color: var(--lego-yellow);
+}
+.Footer > .findUs > .iconWrapper > a {
+    color: white;
+}
+
+.Footer > .findUs > .iconWrapper > a:hover {
+    color: var(--lego-yellow);
+}
+
+@media screen and (min-width: 900px) {
+    .Footer {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 50px;
+    }
+
+    .Footer > .footer_about > h3, .Footer > .quickLinks > h3, .Footer > .quickLinks > h3, .Footer > .findUs > h3 {
+        padding: 20px 0;
+        font-weight: 700;
+        font-size: 19.5484px;
+        line-height: 25px;
+        color: #FFFFFF;
+    }
+
+    .Footer > .footer_about {
+        max-width: 400px;
+    }
+
+    .Footer > .quickLinks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Footer > .findUs > .iconWrapper {
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 40px 40px;
+        grid-row: auto auto;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+}

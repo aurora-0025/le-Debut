@@ -1,0 +1,279 @@
+.form-wrapper {
+    position: relative;
+    margin: 128px 15% 128px 15%;
+    box-shadow: 0px 0px 67px rgba(0, 0, 0, 0.49);
+    border-radius: 50px 40px 40px 40px;
+  }
+  
+  .form-wrapper:before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+  }
+  
+  .lego-character-proximity {
+    position: absolute;
+    background-color: transparent;
+    height: 120px;
+    width: 100px;
+    top: -90px;
+    right: 20px;
+  }
+  
+  .wobble{
+    animation: shake 1s infinite;
+  }
+  @keyframes shake {
+    0%  { transform: translateY(-15px)   rotate(0deg);  }
+    25%  { transform:  translateY(-15px) rotate(-10deg);  }
+    50%  { transform:  translateY(-15px) rotate(0deg);  }
+    75%  { transform: translateY(-15px) rotate(10deg);  }
+    100%  { transform: translateY(-15px)  rotate(0deg);  }
+  }
+  
+  .lego-character {
+    position: absolute;
+    transition: transform 0.25s ease-in-out;
+    top: -70px;
+    right: 20px;
+    z-index: -2;
+  }
+  
+  .lego-character-proximity:hover ~.lego-character {
+    transform: translateY(30px);
+  }
+  .form-wrapper:hover > .lego-character {
+    transform: translateY(-30px);
+  }
+  
+  #eyes, #eyes img {
+    position: absolute;
+    width: 7px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 67px rgba(0, 0, 0, 0.49);
+    border-radius: 50px 40px 40px 40px;
+  }
+  
+  .form > h1 {
+    font-size: clamp(36px, 8vw,55px);
+    font-weight: 700;
+    line-height: 70px;
+    color: #2196F3;
+  }
+
+  .form > h3 {
+    font-size: clamp(26px, 6vw,45px);
+    font-weight: 700;
+    line-height: 70px;
+    color: rgba(0, 0, 0, 0.35);
+  }
+  
+  .inputfield > label, .inputfield > input, .inputfield > p {
+    margin: 0;
+  }
+  .inputfield {
+    margin-top: 20px;
+  }
+  .inputfield > label {
+    display: block;
+    font-size: clamp(24px, 1.9vw,33px);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+  .inputfield > input, .inputfield > textarea {
+    margin-top: 5px;
+    min-height: 50px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 0;
+    padding-left: 10px;
+    background: #FBFBFB;
+    border: 1px solid #ADADAD;
+    border-radius: 9px;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.05em;
+  } 
+  
+  .inputfield > textarea {
+    min-height: 100px;
+    resize: none;
+    background: #FBFBFB;
+    border: 1px solid #ADADAD;
+  }
+  .inputfield > label > span {
+    color: #FF002A;
+  }
+  .inputfield > p {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.05em;
+    color: #FF002A;
+  }
+  
+  select {
+    appearance: none;
+    border: none;
+    padding:10px;
+    background: #FBFBFB;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  select,
+  .dropdown:after {
+    grid-area: select;
+  }
+  .dropdown option {
+    padding: 5px;
+  }
+  
+  select:focus > option:checked { 
+    background: #ADADAD !important;
+  }
+  .dropdown {
+    margin-top: 5px;
+    background: #FBFBFB;
+    border: 1px solid #ADADAD;
+    border-radius: 0.25em;
+    padding: 5px 5px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+  }
+  
+  .dropdown::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background: #ADADAD;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+  }
+/* .uploadImageContainer {
+  position: relative;
+  margin-top: 100px;
+}
+  #file {
+    display: none;
+  }
+
+  #uploadBtn {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    aspect-ratio: 3/4;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #uploadBtn:hover {
+    opacity: 1;
+  }
+
+  #placeholderImg {
+    border: 32px solid;
+    background-color: black;
+    z-index: -2;
+    border-image: url("../assets/border.png") 30 repeat;
+    aspect-ratio: 3/4;
+    width: 200px;
+  }
+   */
+  .legoman-wrapper {
+    margin-top: 25px;
+    flex: 1;
+    max-height: 100%;
+  }
+  .legoman {
+    max-height: 315px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .submit {
+    cursor: pointer;
+    border: none;
+    margin-top: 50px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--lego-yellow);
+    border-radius: 10px;
+    transition: transform 0.5s;
+  }
+  
+  .submit:hover {
+    transform: scale(102%);
+  }
+  
+  .submit > p {
+    font-size: 24px;
+    padding: 10px;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+  }
+
+  ::-webkit-input-placeholder { /* Edge */
+    font-weight: 500;
+    font-size: 28.2801px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    letter-spacing: -0.05em;
+    
+    color: rgba(0, 0, 0, 0.35);
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-weight: 500;
+    font-size: 28.2801px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    letter-spacing: -0.05em;
+    
+    color: rgba(0, 0, 0, 0.35);
+  }
+  
+  ::placeholder {
+    font-weight: 500;
+    font-size: 28.2801px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    letter-spacing: -0.05em;
+    
+    color: rgba(0, 0, 0, 0.35);
+  }

@@ -1,0 +1,253 @@
+#home {
+    position: relative;
+    z-index: 1;
+    overflow-x: clip;
+}
+
+#home > .landing {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10%;
+    z-index: 1;
+}
+
+.landing > h1 {
+    font-weight: 700;
+    font-size: clamp(50px, 8vw, 67.8368px);
+    line-height: 90%;
+    /* or 67px */
+
+    letter-spacing: -0.02em;
+    color: #282828;
+}
+
+.landing > h2 {
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: clamp(30px, 8vw, 42.4116px);
+    line-height: 90%;
+    /* or 45px */
+
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+}
+
+.landing_dateWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.landing_dateWrapper > h4 {
+    font-weight: 500;
+    font-size: clamp(10px, 5vw, 32.903px);
+    line-height: 90%;
+    /* or 28px */
+    letter-spacing: -0.02em;
+    color: #282828;
+}
+
+.registerButton {
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background: #ffdb03;
+    border: 1.43505px solid #282828;
+    border-radius: 47.8349px;
+    font-weight: 700;
+    font-size: 23.7209px;
+    line-height: 66.52%;
+    /* or 16px */
+
+    letter-spacing: -0.05em;
+
+    color: #282828;
+    width: 300px;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.registerButton:hover {
+    background-color: white;
+}
+
+.registerButton > .btnHole {
+    height: 20px;
+    aspect-ratio: 1/1;
+    border: 2.39174px solid #282828;
+    border-radius: 100%;
+}
+
+@media screen and (min-width: 900px) {
+    #home > .landing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10vh auto;
+        text-align: center;
+    }
+    .landing_dateWrapper {
+        justify-content: center;
+    }
+}
+
+/* ABOUT SECTION */
+
+.about {
+    z-index: 2;
+    height: max(100vh, 500px);
+    margin-top: 312px;
+    padding: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    overflow-x: clip;
+    z-index: 2;
+    position: relative;
+}
+
+.legoChars {
+    position: absolute;
+    z-index: -99;
+    left: 50%;
+    transform: translate(-50%);
+    height: 340px;
+    width: 600px;
+    animation: riseUp 1s ease-in;
+}
+
+@keyframes riseUp {
+    0% {
+        transform: translate(-50%,100%);
+    }
+    100% {
+        transform:  translateY(-50%,0);
+    }
+}
+
+.about > .title > h1 {
+    font-weight: 700;
+    font-size: clamp(20px, 10vw, 109.903px);
+    line-height: 111.2%;
+    letter-spacing: -0.055em;
+    color: #ffffff;
+}
+.about > .title > h1 > span {
+    color: #42a5f5;
+}
+
+.about > .player {
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #42a5f5;
+}
+
+@media screen and (min-width: 900px) {
+    .about {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about > * {
+        flex: 1;
+    }
+}
+
+/* SPEAKERS SECTION */
+
+.speaker {
+    height: max(100vh, 100%);
+    padding: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #42a5f5;
+    overflow-x: clip;
+    z-index: 2;
+    position: relative;
+}
+
+.speaker > h1 {
+    padding-bottom: 10%;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 102px;
+    color: #FFFFFF;
+}
+
+.speakerCardsWrapper {
+    display: grid;
+    background-color: #42a5f5;
+    grid-template-columns: repeat(auto-fit, minmax(289px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 860px) {
+    .speakerCardsWrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .speakerCard {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        width: 289px;
+    }
+}
+
+/* REVIEWS SECTION */
+.reviews {
+    padding: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-x: clip;
+    z-index: 2;
+    position: relative;
+}
+
+.reviews > h1 {
+    padding-bottom: 10%;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 102px;
+    color: #FFFFFF;
+}
+
+.reviewWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.reviewWrapper > .chatBubble:nth-of-type(even) {
+    align-self: flex-end;
+    background-color: white;
+    border-radius: 20px 0px 20px 20px;
+    color: #1a1a1a;
+}
+
+.reviewWrapper > .chatBubble:nth-of-type(even)::before {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    border-top: 20px solid white;
+    border-left: 0px;
+    border-right: 40px solid transparent;
+}
+

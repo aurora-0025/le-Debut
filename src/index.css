@@ -1,15 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap');
 
-* {
-  cursor: url('./assets/cursor.png'), default !important;	
-}
 
 :root {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
+  font-family: GoogleSans;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,14 +15,13 @@
   --moon-mist: #e2dacf
 }
 
-body {
-  background-color: var(--moon-mist);
-}
-
 body, html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: #42a5f5;
 }
 
 body > #root > div {
@@ -48,6 +39,11 @@ body > #root > div {
   -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,*:focus,*:hover{
   outline:none;
 }
@@ -63,12 +59,37 @@ body > #root > div {
   }
   /* Track */
   ::-webkit-scrollbar-track {
-      background-color: var(--torch-red)
+    background: rgba(66, 164, 245);
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
       /* background: var(--lego-yellow); */
-      background: url('./assets/scroll_bar.png');
+      background: url('./assets/images/scroll_bar.png');
   }
+}
+
+@font-face {
+  font-family: 'GoogleSans';
+  src: url('./assets/fonts/GOOGLESANS-REGULAR.TTF') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GoogleSans';
+  src: url('./assets/fonts/GOOGLESANS-BOLD.TTF') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GoogleSans';
+  src: url('./assets/fonts/GOOGLESANS-MEDIUM.TTF') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }

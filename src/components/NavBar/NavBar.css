@@ -1,0 +1,106 @@
+#navBar {
+    position: relative;
+    display: flex;
+    padding: 0 10%;
+    height: 100px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#navBar > .logoWrapper {
+    flex: 1.5;
+}
+
+#navBar > .navLinks {
+    flex: 2;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+#navBar > .navLinks li > a {
+    text-decoration: none;
+    color: white;
+}
+.menu * {
+    display: block !important;
+}
+.menu {
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    z-index: 999;
+    width: 200px;
+    min-height: 100vh;
+    background-color:#42a5f5;
+    padding: 0 0px;
+    border-image: url("../../assets/images/scroll_bar.png") 30 repeat;
+    border-left: 30px solid var(--lego-yellow);
+    animation: openNav 0.2s;
+    top: 0;
+}
+
+@keyframes openNav {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 0;
+    }
+}
+.navLinks * {
+    display: none;
+}
+
+.navLinks li > a:hover {
+    color: var(--lego-yellow) !important;
+} 
+
+.navLinks li:hover {
+    color: var(--lego-yellow) !important;
+} 
+
+
+#navBar > .navLinks li {
+    cursor: pointer;
+    font-family: Google Sans;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    color: #FFFFFF;
+}
+
+.backgroundOverlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--blasphemous-black); */
+    z-index: 996;
+}
+
+.backgroundOverlayClosed {
+    display: none;
+    width: 0%;
+    height: 0%;
+}
+
+@media screen and (min-width: 600px) {
+    .navLinks * {
+        display: block;
+    }
+
+    .hamburgerMenu {
+        display: none;
+    }
+}

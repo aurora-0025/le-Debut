@@ -1,0 +1,38 @@
+.loadingScreen {
+    color: #fbbc04;
+    overflow: clip;
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingScreen > .loadingContainer {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.loadingContainer > h3 {
+    font-size: 30px;
+}
+
+.loadingContainer > img {
+    display: inline-block;
+    position: relative;
+    animation: loading 0.75s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
