@@ -33,20 +33,20 @@
 @media screen and (min-width: 900px) {
     .Footer {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 50px;
     }
 
     .Footer > .footer_about > h3, .Footer > .quickLinks > h3, .Footer > .quickLinks > h3, .Footer > .findUs > h3 {
         padding: 20px 0;
         font-weight: 700;
-        font-size: 19.5484px;
+        font-size: clamp(20px, 5vw, 25.5484px);
         line-height: 25px;
         color: #FFFFFF;
     }
 
     .Footer > .footer_about {
-        max-width: 400px;
+        max-width: 600px;
     }
 
     .Footer > .quickLinks {

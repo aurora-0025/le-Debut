@@ -13,7 +13,7 @@
 
 .landing > h1 {
     font-weight: 700;
-    font-size: clamp(50px, 8vw, 67.8368px);
+    font-size: max(40px, 6vw);
     line-height: 90%;
     /* or 67px */
 
@@ -24,7 +24,7 @@
 .landing > h2 {
     padding: 10px 0;
     font-weight: 500;
-    font-size: clamp(30px, 8vw, 42.4116px);
+    font-size: max(24px, 3vw);
     line-height: 90%;
     /* or 45px */
 
@@ -41,7 +41,7 @@
 
 .landing_dateWrapper > h4 {
     font-weight: 500;
-    font-size: clamp(10px, 5vw, 32.903px);
+    font-size: max(24px, 2.5vw);
     line-height: 90%;
     /* or 28px */
     letter-spacing: -0.02em;
@@ -131,7 +131,7 @@
 
 .about > .title > h1 {
     font-weight: 700;
-    font-size: clamp(20px, 10vw, 109.903px);
+    font-size: max(70px, 8vw);
     line-height: 111.2%;
     letter-spacing: -0.055em;
     color: #ffffff;
@@ -176,7 +176,7 @@
 .speaker > h1 {
     padding-bottom: 10%;
     font-weight: 700;
-    font-size: 80px;
+    font-size: max(70px, 8vw);
     line-height: 102px;
     color: #FFFFFF;
 }
@@ -223,7 +223,7 @@
 .reviews > h1 {
     padding-bottom: 10%;
     font-weight: 700;
-    font-size: 80px;
+    font-size: max(70px, 8vw);
     line-height: 102px;
     color: #FFFFFF;
 }
