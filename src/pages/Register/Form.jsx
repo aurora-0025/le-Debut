@@ -10,9 +10,44 @@ function Form() {
     const [angleDeg, setAngleDeg] = useState(0)
     const [nameError, setNameError] = useState(null)
     const [wobble, setWobble] = useState(false)
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 	const [loadingTimer, setLoadingTimer] = useState(true)
     const [loadingMsg, setLoadingMsg] = useState(null)
+
+    const [name,setName] = useState("");
+    const [email,setEmail] = useState("");
+    const [department,setDepartment] = useState("CE");
+    const [classno,setClassno] = useState("1");
+    const [phoneNumber,setPhoneNumber] = useState("");
+    const [moreInfo,setMoreInfo] = useState("");
+
+  
+    function submitForm(){
+        
+        console.log(name);
+        let baseURL = "https://le-debut.vercel.app"
+        if(import.meta.env.DEV) baseURL = "http://localhost:3000"
+        fetch(`${baseURL}/api/submitForm`,{
+          
+          method:"post",
+          headers:{
+            "Accept":"application/json",
+            "Content-Type":"application/json"
+          },
+          body:JSON.stringify({
+            name:name,
+            phoneNumber:phoneNumber,
+            email:email,
+            classno:classno,
+            department:department,
+            moreInfo:moreInfo
+          })
+        }).then(response=>response.json()).then(data=>{
+          console.log("success",data);
+        }).catch((error)=>{
+          console.log("error:",error)
+        });
+      }
 
     function angle(cx, cy, ex, ey) {
         const dy = ey - cy
@@ -61,7 +96,7 @@ function Form() {
             window.removeEventListener('mousemove', handleMouseMove)
         }
     }, [])
-    return !loading || !loadingTimer ? (
+    return !loading && !loadingTimer ? (
         <div className='main-wrapper'>
             <div className='form-wrapper'>
                 <div
@@ -97,7 +132,7 @@ function Form() {
                         />
                     </div>
                 </div>
-                <form action='' className='form'>
+                <form action='submit' className='form'>
                     <h1 className='unselectable'>Welcome Aboard!</h1>
                     <h3 className='unselectable'>un poco loco</h3>
                     <div className='inputfield'>
@@ -107,6 +142,7 @@ function Form() {
                         <input
                             placeholder='Enter your name'
                             id='name'
+                            onChange={(e)=>setName(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
@@ -126,6 +162,7 @@ function Form() {
                         <input
                             placeholder='Enter your Email ID'
                             id='mail'
+                            onChange={(e)=>setEmail(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
@@ -145,6 +182,7 @@ function Form() {
                         <input
                             placeholder='Enter your Contact Number'
                             id='phno'
+                            onChange={(e)=>setPhoneNumber(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
@@ -163,7 +201,7 @@ function Form() {
                             Your Department<span>*</span>
                         </label>
                         <div className='dropdown'>
-                            <select id='dept' name='department'>
+                            <select id='dept' name='department' onChange={(e)=>setDepartment(e.target.value)}>
                                 <option value='CE'>CE</option>
                                 <option value='CT'>CT</option>
                                 <option value='CSE'>CSE</option>
@@ -180,7 +218,7 @@ function Form() {
                             Your Class<span>*</span>
                         </label>
                         <div className='dropdown'>
-                            <select id='class' name='department'>
+                            <select id='class' name='department' onChange={(e)=>setClassno(e.target.value)} >
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                             </select>
@@ -228,13 +266,14 @@ function Form() {
                         <textarea
                             placeholder='Any expectations or suggestions'
                             id='desc'
+                            onChange={(e)=>setMoreInfo(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
                             style={nameError && { border: '2px solid #FF002A' }}
                         />
                     </div>
-                    <button type='submit' className='submit'>
+                    <button type='submit' className='submit' onClick={(e)=>{e.preventDefault() ,submitForm()}}>
                         <p>Let&apos;s Go</p>
                     </button>
                 </form>

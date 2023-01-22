@@ -10,16 +10,15 @@ function NavBar() {
     const location = useLocation();
     const navigate = useNavigate();
     const {store, actions} = useContext(AppContext);
-    const [toggle, setToggle] = useState(false);
-    const changeToggle = () => {
-         setToggle(!toggle);
-    }
+    const [toggle, setToggle] = useState(false)
     const executeScroll = () => {
-        setToggle(false);
         if(location.pathname !== '/') {
             navigate('/');
         }
         else store.speakersRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    const changeToggle = () => {
+        setToggle(!toggle);
     }
     return (
         <div id='navBar'>
