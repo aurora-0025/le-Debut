@@ -11,43 +11,42 @@ function Form() {
     const [nameError, setNameError] = useState(null)
     const [wobble, setWobble] = useState(false)
     const [loading, setLoading] = useState(false)
-	const [loadingTimer, setLoadingTimer] = useState(true)
+    const [loadingTimer, setLoadingTimer] = useState(true)
     const [loadingMsg, setLoadingMsg] = useState(null)
 
-    const [name,setName] = useState("");
-    const [email,setEmail] = useState("");
-    const [department,setDepartment] = useState("CE");
-    const [classno,setClassno] = useState("1");
-    const [phoneNumber,setPhoneNumber] = useState("");
-    const [moreInfo,setMoreInfo] = useState("");
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [department, setDepartment] = useState('CE')
+    const [classno, setClassno] = useState('1')
+    const [phoneNumber, setPhoneNumber] = useState('')
+    const [moreInfo, setMoreInfo] = useState('')
 
-  
-    function submitForm(){
-        
-        console.log(name);
-        let baseURL = "https://le-debut.vercel.app"
-        if(import.meta.env.DEV) baseURL = "http://localhost:3000"
-        fetch(`${baseURL}/api/submitForm`,{
-          
-          method:"post",
-          headers:{
-            "Accept":"application/json",
-            "Content-Type":"application/json"
-          },
-          body:JSON.stringify({
-            name:name,
-            phoneNumber:phoneNumber,
-            email:email,
-            classno:classno,
-            department:department,
-            moreInfo:moreInfo
-          })
-        }).then(response=>response.json()).then(data=>{
-          console.log("success",data);
-        }).catch((error)=>{
-          console.log("error:",error)
-        });
-      }
+    function submitForm() {
+        let baseURL = 'https://le-debut.vercel.app'
+        if (import.meta.env.DEV) baseURL = 'http://localhost:3000'
+        fetch(`${baseURL}/api/submitForm`, {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name,
+                phoneNumber,
+                email,
+                classno,
+                department,
+                moreInfo,
+            }),
+        })
+            .then((response) => console.log(response))
+            .then((data) => {
+                console.log('success', data)
+            })
+            .catch((error) => {
+                console.log('error:', error);
+            })
+    }
 
     function angle(cx, cy, ex, ey) {
         const dy = ey - cy
@@ -74,13 +73,12 @@ function Form() {
         setAngleDeg(angle(targetX, targetY, anchorX, anchorY))
     }
 
-
-	useEffect(() => {
-        window.addEventListener('load', ()=>setLoading(false))
-		setTimeout(() => { 
-			setLoadingTimer(false)
-		  }, 2000)
-        return () => window.removeEventListener('load', ()=>setLoading(false))
+    useEffect(() => {
+        window.addEventListener('load', () => setLoading(false))
+        setTimeout(() => {
+            setLoadingTimer(false)
+        }, 2000)
+        return () => window.removeEventListener('load', () => setLoading(false))
     }, [])
 
     useEffect(() => {
@@ -142,7 +140,7 @@ function Form() {
                         <input
                             placeholder='Enter your name'
                             id='name'
-                            onChange={(e)=>setName(e.target.value)}
+                            onChange={(e) => setName(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
@@ -162,7 +160,7 @@ function Form() {
                         <input
                             placeholder='Enter your Email ID'
                             id='mail'
-                            onChange={(e)=>setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
@@ -182,7 +180,7 @@ function Form() {
                         <input
                             placeholder='Enter your Contact Number'
                             id='phno'
-                            onChange={(e)=>setPhoneNumber(e.target.value)}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
@@ -201,7 +199,11 @@ function Form() {
                             Your Department<span>*</span>
                         </label>
                         <div className='dropdown'>
-                            <select id='dept' name='department' onChange={(e)=>setDepartment(e.target.value)}>
+                            <select
+                                id='dept'
+                                name='department'
+                                onChange={(e) => setDepartment(e.target.value)}
+                            >
                                 <option value='CE'>CE</option>
                                 <option value='CT'>CT</option>
                                 <option value='CSE'>CSE</option>
@@ -218,7 +220,11 @@ function Form() {
                             Your Class<span>*</span>
                         </label>
                         <div className='dropdown'>
-                            <select id='class' name='department' onChange={(e)=>setClassno(e.target.value)} >
+                            <select
+                                id='class'
+                                name='department'
+                                onChange={(e) => setClassno(e.target.value)}
+                            >
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                             </select>
@@ -266,14 +272,21 @@ function Form() {
                         <textarea
                             placeholder='Any expectations or suggestions'
                             id='desc'
-                            onChange={(e)=>setMoreInfo(e.target.value)}
+                            onChange={(e) => setMoreInfo(e.target.value)}
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
                             style={nameError && { border: '2px solid #FF002A' }}
                         />
                     </div>
-                    <button type='submit' className='submit' onClick={(e)=>{e.preventDefault() ,submitForm()}}>
+                    <button
+                        type='submit'
+                        className='submit'
+                        onClick={(e) => {
+                            e.preventDefault()
+                            submitForm()
+                        }}
+                    >
                         <p>Let&apos;s Go</p>
                     </button>
                 </form>

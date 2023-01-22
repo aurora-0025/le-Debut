@@ -1,27 +1,28 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const { Client } = require('@notionhq/client');
 require('dotenv').config();
 const cors = require('cors');
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+const bodyParser = require('body-parser');
+
+const jsonParser = bodyParser.json();
 
 const app = express();
 
 app.use(cors());
 
-const NOTION_INTEGRATION_TOKEN = process.env.NOTION_INTEGRATION_TOKEN
+const {NOTION_INTEGRATION_TOKEN} = process.env
 const databaseId = process.env.NOTION_DB_ID
 const notion = new Client({auth: NOTION_INTEGRATION_TOKEN});
 
-console.log(notion);
-
 app.post('/submitForm',jsonParser,async(req,res)=>{
- const name=req.body.name;
- const email=req.body.email;
- const phoneNumber=req.body.phoneNumber;
- const department=req.body.department;
- const classno=req.body.classno;
- const moreInfo=req.body.moreInfo;
+ const {name} = req.body;
+ const {email} = req.body;
+ const {phoneNumber} = req.body;
+ const {department} = req.body;
+ const {classno} = req.body;
+ const {moreInfo} = req.body;
  try{
   const response = await notion.pages.create({
     parent:{database_id:databaseId},
@@ -35,65 +36,64 @@ app.post('/submitForm',jsonParser,async(req,res)=>{
           }
         ]
       },
-      "Email":{
-        "rich_text":[
+      'Email':{
+        'rich_text':[
            {
-             "type":"text",
-             "text":{
+             'type':'text',
+             'text':{
                content:email
              }
            }
          ]
        },
-       "Department":{
-        "rich_text":[
+       'Department':{
+        'rich_text':[
            {
-             "type":"text",
-             "text":{
+             'type':'text',
+             'text':{
                  content:department
              }
            }
          ]
        },
-       "Class":{
-        "rich_text":[
+       'Class':{
+        'rich_text':[
            {
-             "type":"text",
-             "text":{
+             'type':'text',
+             'text':{
                  content:classno
              }
            }
          ]
        },
-       "Anything else":{
-        "rich_text":[
+       'Anything else':{
+        'rich_text':[
            {
-             "type":"text",
-             "text":{
+             'type':'text',
+             'text':{
                  content:moreInfo
              }
            }
          ]
        },
        
-      "Phone":{
-       "rich_text":[
+      'Phone':{
+       'rich_text':[
           {
-            "type":"text",
-            "text":{
+            'type':'text',
+            'text':{
               content:phoneNumber
             }
           }
         ]
       }
     }
-  })
+  }).then(()=> res.send('OK'))
   console.log(response);
-  console.log(process.env);
-  console.log("success test");
+  console.log('success');
  }catch(error){
   console.log(error);
  };
 })
 
-module.exports = app;
+export default app;
