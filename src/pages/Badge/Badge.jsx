@@ -31,7 +31,7 @@ function Badge() {
         await removeBGTF(
             {
                 imageSrc,
-                internalResolution: 'full',
+                internalResolution: 'medium',
             },
             (result) => {
                 setRemovedBGImage(result)
@@ -168,7 +168,7 @@ function Badge() {
 
     return (
         <>
-         {loading && <Loader />}  
+         {loading && <Loader loadingMsg={loadingMsg} />}  
             {src && (
                 <div style={cropWindow ? { display: 'block' } : { display: 'none' }}>
                     <ReactCrop

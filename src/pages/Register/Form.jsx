@@ -61,7 +61,7 @@ function Form() {
             window.removeEventListener('mousemove', handleMouseMove)
         }
     }, [])
-    return !loading && !loadingTimer ? (
+    return !loading || !loadingTimer ? (
         <div className='main-wrapper'>
             <div className='form-wrapper'>
                 <div

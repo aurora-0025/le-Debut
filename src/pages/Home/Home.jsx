@@ -29,7 +29,7 @@ function Home () {
 	}, [speakersRef])
 	
 	return (
-		!loading && !loadingTimer ? (
+		!loading || !loadingTimer ? (
 		<div id="home">
 			<div className="landing">
 				<h1>freshers ahoy !</h1>
