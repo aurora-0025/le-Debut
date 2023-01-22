@@ -12,7 +12,7 @@ function NavBar() {
     const {store, actions} = useContext(AppContext);
     const [toggle, setToggle] = useState(false);
     const changeToggle = () => {
-        setToggle(true);
+         setToggle(!toggle);
     }
     const executeScroll = () => {
         setToggle(false);
