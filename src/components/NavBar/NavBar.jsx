@@ -15,7 +15,7 @@ function NavBar() {
         setToggle(!toggle);
     }
     const executeScroll = () => {
-        changeToggle();
+        setToggle(false);
         if(location.pathname !== '/') {
             navigate('/');
         }
