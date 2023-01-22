@@ -10,7 +10,7 @@ import { AppContext } from '../../context/AppContext';
 import Loader from '../../components/Loading/Loader';
 
 function Home () {
-	const [loading, setLoading] = useState(true)
+	const [loading, setLoading] = useState(false)
 	const [loadingTimer, setLoadingTimer] = useState(true)
 	const [loadingMsg, setLoadingMsg] = useState(null)
 	const speakersRef = useRef(null);
@@ -29,7 +29,7 @@ function Home () {
 	}, [speakersRef])
 	
 	return (
-		!loading || !loadingTimer ? (
+		!loading && !loadingTimer ? (
 		<div id="home">
 			<div className="landing">
 				<h1>freshers ahoy !</h1>
