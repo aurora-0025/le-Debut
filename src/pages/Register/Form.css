@@ -1,6 +1,10 @@
 .form-wrapper {
     position: relative;
-    margin: 128px 15% 128px 15%;
+    min-width: 320px;
+    margin-left: max(20px, 10vw);
+    margin-right: max(20px, 10vw);
+    margin-top: 128px;
+    margin-bottom: 30px;
     box-shadow: 0px 0px 67px rgba(0, 0, 0, 0.49);
     border-radius: 50px 40px 40px 40px;
   }
@@ -64,7 +68,7 @@
   }
   
   .form > h1 {
-    font-size: clamp(36px, 8vw,55px);
+    font-size: clamp(30px, 8vw,55px);
     font-weight: 700;
     line-height: 70px;
     color: #2196F3;
@@ -85,7 +89,7 @@
   }
   .inputfield > label {
     display: block;
-    font-size: clamp(24px, 1.9vw,33px);
+    font-size: clamp(18px, 1.9vw,33px);
     font-weight: 700;
     letter-spacing: -0.05em;
   }
@@ -247,7 +251,7 @@
 
   ::-webkit-input-placeholder { /* Edge */
     font-weight: 500;
-    font-size: 28.2801px;
+    font-size: clamp(16px, 1.9vw,28px);
     line-height: 36px;
     /* identical to box height */
     
@@ -258,7 +262,7 @@
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     font-weight: 500;
-    font-size: 28.2801px;
+    font-size: clamp(16px, 1.9vw,28px);
     line-height: 36px;
     /* identical to box height */
     
@@ -269,11 +273,23 @@
   
   ::placeholder {
     font-weight: 500;
-    font-size: 28.2801px;
+    font-size: clamp(16px, 1.9vw,28px);
     line-height: 36px;
     /* identical to box height */
     
     letter-spacing: -0.05em;
     
     color: rgba(0, 0, 0, 0.35);
+  }
+  @media screen and (max-width: 480px) {
+    .form-wrapper {
+      position: relative;
+      margin-top: 128px;
+      box-shadow: 0px 0px 67px rgba(0, 0, 0, 0.49);
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    .form {
+      border-radius: 5px 5px 5px 5px;
+    }
   }

@@ -13,7 +13,7 @@
 
 .landing > h1 {
     font-weight: 700;
-    font-size: max(40px, 6vw);
+    font-size: max(36px, 6vw);
     line-height: 90%;
     /* or 67px */
 
@@ -46,6 +46,10 @@
     /* or 28px */
     letter-spacing: -0.02em;
     color: #282828;
+}
+
+.legoChars {
+    margin-left: 20px;
 }
 
 .registerButton {
@@ -131,7 +135,7 @@
 
 .about > .title > h1 {
     font-weight: 700;
-    font-size: max(70px, 8vw);
+    font-size: max(55px, 7vw);
     line-height: 111.2%;
     letter-spacing: -0.055em;
     color: #ffffff;

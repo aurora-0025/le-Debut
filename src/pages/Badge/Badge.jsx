@@ -1,5 +1,4 @@
 /* eslint-disable consistent-return */
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect, useRef, useState } from 'react'
 import { removeBGTF } from 'react-remove-bg'
 import ReactCrop from 'react-image-crop'
@@ -15,7 +14,6 @@ function Badge() {
     const [downloadURI, setDownloadURI] = useState(null)
     const [loading, setLoading] = useState(false)
     const [loadingMsg, setLoadingMsg] = useState(null)
-    const [completedCrop, setCompletedCrop] = useState(null)
     const [cropWindow, setCropWindow] = useState(false)
     const [crop, setCrop] = useState({
         x: 0,
@@ -44,12 +42,6 @@ function Badge() {
             const file = e.target.files[0]
             if (file) setCropWindow(true)
             setSrc(URL.createObjectURL(file))
-            // const reader = new FileReader()
-            // reader.readAsDataURL(file)
-            // reader.onload = () => {
-            //     setSrc(URL.createObjectURL(file));
-            //     // removeBG(reader.result)
-            // }
         }
     }
 
@@ -106,9 +98,8 @@ function Badge() {
 
         // Converting to base64
         const base64Image = canvas.toDataURL('image/jpeg')
-        setLoadingMsg('Removing BG...')
+        setLoadingMsg('Generating Badge...')
         removeBG(base64Image)
-        // setOutput(base64Image)
     }
     useEffect(() => {
         if (removedBGImage) {
@@ -174,7 +165,6 @@ function Badge() {
                     <ReactCrop
                         aspect={1}
                         crop={crop}
-                        onComplete={(c) => setCompletedCrop(c)}
                         onChange={(c) => setCrop(c)}
                     >
                         <img alt='' src={src} onLoad={(e) => setImage(e.target)} />
@@ -241,7 +231,6 @@ function Badge() {
                             Download
                         </a>
                     )}
-                    {/* {removedBGImage && <img src={removedBGImage.src} width={300} height={300} alt='removedBG' />} */}
                 </div>
                 <div className='player' />
             </div>
