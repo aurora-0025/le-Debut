@@ -60,7 +60,7 @@ function Badge() {
          * @type {HTMLCanvasElement} canvas
          */
         setCropWindow(false)
-        setLoading(true)
+        // setLoading(true)
         setLoadingMsg('Cropping Image..')
         const canvas = canvasRef.current
         const scaleX = image.naturalWidth / image.width
@@ -73,11 +73,12 @@ function Badge() {
         canvas.width = Math.floor(crop.width * scaleX * pixelRatio)
         canvas.height = Math.floor(crop.height * scaleY * pixelRatio)
         ctx.scale(pixelRatio, pixelRatio)
-        ctx.imageSmoothingQuality = 'high'
+        // ctx.imageSmoothingQuality = 'high'
         const cropX = crop.x * scaleX
         const cropY = crop.y * scaleY
         ctx.save()
         ctx.translate(-cropX, -cropY)
+        ctx.filter = 'grayscale(100)'
         ctx.drawImage(
             image,
             0,
@@ -89,22 +90,7 @@ function Badge() {
             image.naturalWidth,
             image.naturalHeight,
         )
-        ctx.restore()
-        setLoadingMsg('Converting it to B/W...')
-        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
-        const d = imgData.data
-        // loop through all pixels
-        // each pixel is decomposed in its 4 rgba values
-        for (let i = 0; i < d.length; i += 4) {
-            // get the medium of the 3 first values ( (r+g+b)/3 )
-            const med = (d[i] + d[i + 1] + d[i + 2]) / 3
-            // set it to each value (r = g = b = med)
-            // eslint-disable-next-line no-multi-assign
-            d[i] = d[i + 1] = d[i + 2] = med
-            // we don't touch the alpha
-        }
-        // redraw the new computed image
-        ctx.putImageData(imgData, 0, 0)
+        ctx.restore();
 
         // Converting to base64
         const base64Image = canvas.toDataURL('image/jpeg')
@@ -243,7 +229,7 @@ function Badge() {
                         width={320}
                         height={320}
                         style={{
-                            display: removedBGImage && loading === false ? 'block' : 'none',
+                            display: removedBGImage && loading === false ? 'block' : 'block',
                             borderRadius: '18px',
                         }}
                         ref={canvasRef}
