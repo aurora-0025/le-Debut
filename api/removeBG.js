@@ -29,7 +29,9 @@ async function MyApi(req, res) {
         // eslint-disable-next-line no-buffer-constructor
         const base64Image = imageData.split(';base64,').pop()
 
-        fs.writeFile(`./tmp/${fileName}.png`, base64Image, { encoding: 'base64' }, (err) => {
+        const imagePath = import.meta.env.DEV?`./tmp/${fileName}.png`:`/tmp/${fileName}.png`
+
+        fs.writeFileS(imagePath, base64Image, { encoding: 'base64' }, (err) => {
             console.log('File created')
         })
 
@@ -40,8 +42,7 @@ async function MyApi(req, res) {
         // // wait for the file input element to be visible
         await page.waitForSelector('input[type="file"]')
         const inputUploadHandle = await page.$('input[type=file]')
-        const fileToUpload = `./tmp/${fileName}.png`
-        inputUploadHandle.uploadFile(fileToUpload)
+        inputUploadHandle.uploadFile(imagePath)
 
         await page.waitForSelector('a[download]')
         // // wait for the preview image to load
@@ -69,6 +70,8 @@ async function MyApi(req, res) {
     }
 }
 
-const cors = micro()
+const cors = micro({
+    origin: '*',
+})
 
 export default cors(MyApi)
