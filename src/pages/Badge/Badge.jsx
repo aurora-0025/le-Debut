@@ -30,7 +30,7 @@ function Badge() {
         // let baseURL = 'https://le-debut.vercel.app'
         // if (import.meta.env.DEV) baseURL = 'http://localhost:8000'
         fetch('https://remove-bg-api.fly.dev/removeBG', {
-        // fetch('http://localhost:8080/removeBG', {
+            // fetch('http://localhost:8080/removeBG', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ imageData }),
@@ -148,14 +148,35 @@ function Badge() {
                 }
             }
 
+            const roundedImage = (context, x, y, width, height, radius) => {
+                context.beginPath()
+                context.moveTo(x + radius, y)
+                context.lineTo(x + width - radius, y)
+                context.quadraticCurveTo(x + width, y, x + width, y + radius)
+                context.lineTo(x + width, y + height - radius)
+                context.quadraticCurveTo(x + width, y + height, x + width - radius, y + height)
+                context.lineTo(x + radius, y + height)
+                context.quadraticCurveTo(x, y + height, x, y + height - radius)
+                context.lineTo(x, y + radius)
+                context.quadraticCurveTo(x, y, x + radius, y)
+                context.closePath()
+            }
+
             const drawLayers = () => {
+                roundedImage(ctx, 0, 0, canvas.width, canvas.height, 18)
                 ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height)
+                ctx.clip();
+                ctx.restore();
+                roundedImage(ctx, 0, 0, canvas.width, canvas.height, 18)
                 ctx.drawImage(fgImg, 0, 0, canvas.width, canvas.height)
+                ctx.clip();
                 ctx.fillStyle = 'rgba(255, 255, 255,  0.9)'
                 ctx.font = 'bold 15px GoogleSans'
                 ctx.textBaseline = 'middle'
                 ctx.textAlign = 'center'
+                roundedImage(ctx, 0, 0, canvas.width, canvas.height, 18)
                 ctx.drawImage(overlayImg, 0, 0, canvas.width, canvas.height)
+                ctx.clip();
                 ctx.fontKerning = 'normal'
                 ctx.fillText('ATTENDEE', canvas.width / 2, canvas.height - 15)
                 ctx.save()
@@ -224,7 +245,7 @@ function Badge() {
                         height={320}
                         style={{
                             display: removedBGImage && loading === false ? 'block' : 'none',
-                            borderRadius: '10px',
+                            borderRadius: '18px',
                         }}
                         ref={canvasRef}
                     />
