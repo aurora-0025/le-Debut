@@ -24,7 +24,7 @@ function Form() {
     function submitForm() {
         let baseURL = 'https://le-debut.vercel.app'
         if (import.meta.env.DEV) baseURL = 'http://localhost:3000'
-        fetch(`${baseURL}/api/submitForm`, {
+        fetch(`${baseURL}/api/sendForm`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -39,7 +39,7 @@ function Form() {
                 moreInfo,
             }),
         })
-            .then((response) => console.log(response))
+            .then((response) => response.json())
             .then((data) => {
                 console.log('success', data)
             })

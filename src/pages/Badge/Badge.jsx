@@ -1,7 +1,6 @@
+/* eslint-disable no-console */
 /* eslint-disable consistent-return */
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { useEffect, useRef, useState } from 'react'
-import { removeBGTF } from 'react-remove-bg'
 import ReactCrop from 'react-image-crop'
 import badgeBg from '../../assets/images/BadgeBg.png'
 import badgeOverlay from '../../assets/images/BadgeOverlay.png'
@@ -10,12 +9,11 @@ import './Badge.css'
 import Loader from '../../components/Loading/Loader'
 
 function Badge() {
-    const [removedBGImage, setRemovedBGImage] = useState(null)
     const [src, setSrc] = useState(null)
     const [downloadURI, setDownloadURI] = useState(null)
     const [loading, setLoading] = useState(false)
     const [loadingMsg, setLoadingMsg] = useState(null)
-    const [completedCrop, setCompletedCrop] = useState(null)
+    const [removedBGImage, setRemovedBGImage] = useState(null)
     const [cropWindow, setCropWindow] = useState(false)
     const [crop, setCrop] = useState({
         x: 0,
@@ -27,16 +25,24 @@ function Badge() {
     const [image, setImage] = useState(null)
     const canvasRef = useRef(null)
 
-    const removeBG = async (imageSrc) => {
-        await removeBGTF(
-            {
-                imageSrc,
-                internalResolution: 'full',
-            },
-            (result) => {
-                setRemovedBGImage(result)
-            },
-        )
+    const removeBG = async (imageData) => {
+        let baseURL = 'https://le-debut.vercel.app'
+        if (import.meta.env.DEV) baseURL = 'http://localhost:3000'
+        fetch(`${baseURL}/api/removeBG`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ imageData }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                setRemovedBGImage(data.imageSrc)
+                setLoading(false)
+                console.log('success received removed BG')
+            })
+            .catch((error) => {
+                console.log('error:', error)
+                setLoading(false)
+            })
     }
 
     const readUpload = (e) => {
@@ -44,12 +50,7 @@ function Badge() {
             const file = e.target.files[0]
             if (file) setCropWindow(true)
             setSrc(URL.createObjectURL(file))
-            // const reader = new FileReader()
-            // reader.readAsDataURL(file)
-            // reader.onload = () => {
-            //     setSrc(URL.createObjectURL(file));
-            //     // removeBG(reader.result)
-            // }
+            e.target.value = ''
         }
     }
 
@@ -108,13 +109,13 @@ function Badge() {
         const base64Image = canvas.toDataURL('image/jpeg')
         setLoadingMsg('Removing BG...')
         removeBG(base64Image)
-        // setOutput(base64Image)
     }
     useEffect(() => {
         if (removedBGImage) {
             /**
              * @type {HTMLCanvasElement} canvas
              */
+            console.log(removedBGImage)
             const canvas = canvasRef.current
             const ctx = canvas?.getContext('2d')
             canvas.width = 256
@@ -125,7 +126,7 @@ function Badge() {
             const overlayImg = new Image()
             bgImg.src = badgeBg
             fgImg.style['z-index'] = '98'
-            fgImg.src = removedBGImage.src
+            fgImg.src = removedBGImage
             overlayImg.style['z-index'] = '99'
             overlayImg.src = badgeOverlay
 
@@ -153,7 +154,7 @@ function Badge() {
                 ctx.textBaseline = 'middle'
                 ctx.textAlign = 'center'
                 ctx.drawImage(overlayImg, 0, 0, canvas.width, canvas.height)
-                ctx.fontKerning = 'normal';
+                ctx.fontKerning = 'normal'
                 ctx.fillText('ATTENDEE', canvas.width / 2, canvas.height - 15)
                 ctx.save()
                 setDownloadURI(
@@ -168,15 +169,10 @@ function Badge() {
 
     return (
         <>
-         {loading && <Loader />}  
+            {loading && <Loader loadingMsg={loadingMsg} />}
             {src && (
                 <div style={cropWindow ? { display: 'block' } : { display: 'none' }}>
-                    <ReactCrop
-                        aspect={1}
-                        crop={crop}
-                        onComplete={(c) => setCompletedCrop(c)}
-                        onChange={(c) => setCrop(c)}
-                    >
+                    <ReactCrop aspect={1} crop={crop} onChange={(c) => setCrop(c)}>
                         <img alt='' src={src} onLoad={(e) => setImage(e.target)} />
                     </ReactCrop>
                     <button
@@ -224,11 +220,10 @@ function Badge() {
                     <canvas
                         width={320}
                         height={320}
-                        style={
-                            removedBGImage && loading === false
-                                ? { display: 'block' }
-                                : { display: 'none' }
-                        }
+                        style={{
+                            display: removedBGImage && loading === false ? 'block' : 'none',
+                            borderRadius: '10px',
+                        }}
                         ref={canvasRef}
                     />
                     {removedBGImage && (
@@ -241,7 +236,6 @@ function Badge() {
                             Download
                         </a>
                     )}
-                    {/* {removedBGImage && <img src={removedBGImage.src} width={300} height={300} alt='removedBG' />} */}
                 </div>
                 <div className='player' />
             </div>
