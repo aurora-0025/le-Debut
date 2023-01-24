@@ -27,10 +27,9 @@ function Badge() {
     const canvasRef = useRef(null)
 
     const removeBG = async (imageData) => {
-        // let baseURL = 'https://le-debut.vercel.app'
-        // if (import.meta.env.DEV) baseURL = 'http://localhost:8000'
-        fetch('https://remove-bg-api.fly.dev/removeBG', {
-            // fetch('http://localhost:8080/removeBG', {
+        let apiURL = 'https://le-debut.vercel.app'
+        if (import.meta.env.DEV) apiURL = 'http://localhost:8080'
+        fetch(`${apiURL}/removeBG`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ imageData }),
