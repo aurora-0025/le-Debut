@@ -60,7 +60,7 @@ function Badge() {
          * @type {HTMLCanvasElement} canvas
          */
         setCropWindow(false)
-        // setLoading(true)
+        setLoading(true)
         setLoadingMsg('Cropping Image..')
         const canvas = canvasRef.current
         const scaleX = image.naturalWidth / image.width
@@ -229,7 +229,7 @@ function Badge() {
                         width={320}
                         height={320}
                         style={{
-                            display: removedBGImage && loading === false ? 'block' : 'block',
+                            display: removedBGImage && loading === false ? 'block' : 'none',
                             borderRadius: '18px',
                         }}
                         ref={canvasRef}
