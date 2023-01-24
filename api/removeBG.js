@@ -29,7 +29,7 @@ async function MyApi(req, res) {
         // eslint-disable-next-line no-buffer-constructor
         const base64Image = imageData.split(';base64,').pop()
 
-        const imagePath = import.meta.env.DEV?`./tmp/${fileName}.png`:`/tmp/${fileName}.png`
+        const imagePath = `/tmp/${fileName}.png`
 
         fs.writeFileS(imagePath, base64Image, { encoding: 'base64' }, (err) => {
             console.log('File created')
