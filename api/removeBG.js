@@ -31,7 +31,7 @@ async function MyApi(req, res) {
 
         const imagePath = `/tmp/${fileName}.png`
 
-        fs.writeFileS(imagePath, base64Image, { encoding: 'base64' }, (err) => {
+        fs.writeFile(imagePath, base64Image, { encoding: 'base64' }, (err) => {
             console.log('File created')
         })
 
