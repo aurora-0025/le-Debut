@@ -1,8 +1,8 @@
 {
     "rewrites": [
         { "source": "/api/(.*)", "destination": "/api" },
-        { "src": "/", "dest": "/" },
-        { "src": "/badge", "dest": "/" },
-        { "src": "/register", "dest": "/" }
+        { "source": "/", "destination": "/" },
+        { "source": "/badge", "destination": "/" },
+        { "source": "/register", "destination": "/" }
     ]
 }
