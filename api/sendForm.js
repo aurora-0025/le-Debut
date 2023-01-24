@@ -82,9 +82,9 @@ async function MyApi(req, res) {
                         },
                     },
                 })
-              .then(() => res.json({'success':'created db entry'}))
+                .then(() => res.json({ success: 'created db entry' }))
         } catch (error) {
-            res.json({'error':error})
+            res.json({ error })
         }
     }
 }
