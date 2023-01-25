@@ -59,6 +59,7 @@ function Badge() {
         /**
          * @type {HTMLCanvasElement} canvas
          */
+        setRemovedBGImage(null);
         setCropWindow(false)
         setLoading(true)
         setLoadingMsg('Cropping Image..')
@@ -108,7 +109,6 @@ function Badge() {
             /**
              * @type {HTMLCanvasElement} canvas
              */
-            console.log(removedBGImage)
             const canvas = canvasRef.current
             const ctx = canvas?.getContext('2d')
             canvas.width = 256
