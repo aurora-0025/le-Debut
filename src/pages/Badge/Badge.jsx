@@ -73,10 +73,8 @@ function Badge() {
         canvas.width = Math.floor(crop.width * scaleX * pixelRatio)
         canvas.height = Math.floor(crop.height * scaleY * pixelRatio)
         ctx.scale(pixelRatio, pixelRatio)
-        // ctx.imageSmoothingQuality = 'high'
         const cropX = crop.x * scaleX
         const cropY = crop.y * scaleY
-        ctx.save()
         ctx.translate(-cropX, -cropY)
         ctx.filter = 'grayscale(100)'
         ctx.drawImage(
@@ -90,12 +88,20 @@ function Badge() {
             image.naturalWidth,
             image.naturalHeight,
         )
-        ctx.restore();
-
         // Converting to base64
-        const base64Image = canvas.toDataURL('image/jpeg')
-        setLoadingMsg('Removing BG...')
-        removeBG(base64Image)
+        let base64Image = canvas.toDataURL()
+        const img = new Image()
+        img.src = base64Image;
+        // Reduze Image to reduce server load
+        img.onload= ()=>{
+            canvas.width = 256;
+            canvas.height = 256
+            ctx.drawImage(img, 0, 0, 256, 256)
+            base64Image = canvas.toDataURL('image/jpeg')
+            setLoadingMsg('Removing BG...')
+            removeBG(base64Image)
+        }
+
     }
     useEffect(() => {
         if (removedBGImage) {
