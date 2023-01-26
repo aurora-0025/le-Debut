@@ -14,6 +14,8 @@ function Badge() {
     const [downloadURI, setDownloadURI] = useState(null)
     const [loading, setLoading] = useState(false)
     const [loadingMsg, setLoadingMsg] = useState(null)
+    const [uploadError, setUploadError] = useState(null)
+    const [image, setImage] = useState(null)
     const [removedBGImage, setRemovedBGImage] = useState(null)
     const [cropWindow, setCropWindow] = useState(false)
     const [crop, setCrop] = useState({
@@ -23,7 +25,6 @@ function Badge() {
         height: 256,
         unit: 'px',
     })
-    const [image, setImage] = useState(null)
     const canvasRef = useRef(null)
 
     const removeBG = async (imageData) => {
@@ -48,9 +49,17 @@ function Badge() {
 
     const readUpload = (e) => {
         if (e.target.files) {
-            const file = e.target.files[0]
-            if (file) setCropWindow(true)
-            setSrc(URL.createObjectURL(file))
+            let file = e.target.files[0]
+            const fileSize = file.size;
+            const fileMb = fileSize / 1024 ** 2;
+            if (fileMb >= 17) {
+                setUploadError('Please select a image less than 17MB.');
+                file = null;
+            } else {
+                setUploadError(null);
+                if (file) setCropWindow(true)
+                setSrc(URL.createObjectURL(file))
+            }
             e.target.value = ''
         }
     }
@@ -59,10 +68,11 @@ function Badge() {
         /**
          * @type {HTMLCanvasElement} canvas
          */
-        setRemovedBGImage(null);
+        setRemovedBGImage(null)
         setCropWindow(false)
         setLoading(true)
         setLoadingMsg('Cropping Image..')
+        console.log(image);
         const canvas = canvasRef.current
         const scaleX = image.naturalWidth / image.width
         const scaleY = image.naturalHeight / image.height
@@ -92,17 +102,16 @@ function Badge() {
         // Converting to base64
         let base64Image = canvas.toDataURL()
         const img = new Image()
-        img.src = base64Image;
+        img.src = base64Image
         // Reduze Image to reduce server load
-        img.onload= ()=>{
-            canvas.width = 256;
+        img.onload = () => {
+            canvas.width = 256
             canvas.height = 256
             ctx.drawImage(img, 0, 0, 256, 256)
             base64Image = canvas.toDataURL('image/jpeg')
             setLoadingMsg('Removing BG...')
             removeBG(base64Image)
         }
-
     }
     useEffect(() => {
         if (removedBGImage) {
@@ -156,18 +165,18 @@ function Badge() {
             const drawLayers = () => {
                 roundedImage(ctx, 0, 0, canvas.width, canvas.height, 18)
                 ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height)
-                ctx.clip();
-                ctx.restore();
+                ctx.clip()
+                ctx.restore()
                 roundedImage(ctx, 0, 0, canvas.width, canvas.height, 18)
                 ctx.drawImage(fgImg, 0, 0, canvas.width, canvas.height)
-                ctx.clip();
+                ctx.clip()
                 ctx.fillStyle = 'rgba(255, 255, 255,  0.9)'
                 ctx.font = 'bold 15px GoogleSans'
                 ctx.textBaseline = 'middle'
                 ctx.textAlign = 'center'
                 roundedImage(ctx, 0, 0, canvas.width, canvas.height, 18)
                 ctx.drawImage(overlayImg, 0, 0, canvas.width, canvas.height)
-                ctx.clip();
+                ctx.clip()
                 ctx.fontKerning = 'normal'
                 ctx.fillText('ATTENDEE', canvas.width / 2, canvas.height - 15)
                 ctx.save()
@@ -229,6 +238,7 @@ function Badge() {
                             </button>
                         )}
                     </div>
+                    {uploadError&& <p className='uploadError'>{uploadError}</p>}
                 </div>
                 <div className='generator'>
                     <canvas

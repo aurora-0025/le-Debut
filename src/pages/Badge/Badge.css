@@ -39,6 +39,11 @@ input[type="file"] {
     color: #FFFFFF;
 }
 
+.uploadError {
+    color: rgb(250, 77, 77) !important;
+    font-size: clamp(10px, 3.5vw, 16px) !important;  
+}
+
 .uploadButton {
     border-radius: 12px;
     margin-top: 20px;
