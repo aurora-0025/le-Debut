@@ -20,7 +20,7 @@ function Home () {
         window.addEventListener('load', ()=>setLoading(false))
 		setTimeout(() => { 
 			setLoadingTimer(false)
-		  }, 2000)
+		  }, 4000)
         return () => window.removeEventListener('load', ()=>setLoading(false))
     }, [])
 
