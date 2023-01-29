@@ -48,6 +48,7 @@ function Badge() {
     }
 
     const readUpload = (e) => {
+        setLoading(true);
         if (e.target.files) {
             let file = e.target.files[0]
             const fileSize = file.size;
@@ -70,7 +71,6 @@ function Badge() {
          */
         setRemovedBGImage(null)
         setCropWindow(false)
-        setLoading(true)
         setLoadingMsg('Cropping Image..')
         console.log(image);
         const canvas = canvasRef.current
