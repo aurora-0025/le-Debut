@@ -5,7 +5,7 @@ function SpeakerCard({name, position, img}) {
   return (
     <div className='speakerCard'>
         <div className="speakerCardImg">
-            <div className='speakerImg' style={{'backgroundImage':`url("/src/pages/Home/Components/Speakers/speakersImgs/${img}")`}} />
+            <div className='speakerImg' style={{'backgroundImage':`url("/src/assets/images/speakersImgs/${img}")`}} />
         </div>
         <h3>{name}</h3>
         <h4>{position}</h4>
