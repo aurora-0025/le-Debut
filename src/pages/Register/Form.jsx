@@ -8,20 +8,32 @@ function Form() {
     const legoRef = useRef(null)
 
     const [angleDeg, setAngleDeg] = useState(0)
-    const [nameError, setNameError] = useState(null)
     const [wobble, setWobble] = useState(false)
     const [loading, setLoading] = useState(false)
     const [loadingTimer, setLoadingTimer] = useState(true)
     const [loadingMsg, setLoadingMsg] = useState(null)
 
     const [name, setName] = useState('')
+    const [nameError, setNameError] = useState(null)
     const [email, setEmail] = useState('')
+    const [emailError, setEmailError] = useState(null)
     const [department, setDepartment] = useState('CE')
     const [classno, setClassno] = useState('1')
     const [phoneNumber, setPhoneNumber] = useState('')
+    const [phoneError, setPhoneError] = useState(null)
     const [moreInfo, setMoreInfo] = useState('')
 
-    function submitForm() {
+    // eslint-disable-next-line consistent-return
+    async function submitForm() {
+        setNameError(null);
+        setEmailError(null);
+        setPhoneError(null);
+        if(name === '') setNameError('Please provide us with your name');
+        if(email === '') setEmailError('Please provide us with your email');
+        if(phoneNumber === '') setPhoneError('Please provide us with your contact number');
+
+        if(name === '' || email === '' || phoneNumber === '') return;
+
         let baseURL = 'https://le-debut.vercel.app'
         if (import.meta.env.DEV) baseURL = 'http://localhost:3000'
         fetch(`${baseURL}/api/sendForm`, {
@@ -166,12 +178,12 @@ function Form() {
                             }}
                             type='text'
                             style={
-                                nameError && {
+                                emailError && {
                                     border: '2px solid #FF002A',
                                 }
                             }
                         />
-                        <p>{nameError || ' '}</p>
+                        <p>{emailError || ' '}</p>
                     </div>
                     <div className='inputfield'>
                         <label htmlFor='phno'>
@@ -187,12 +199,12 @@ function Form() {
                             type='tel'
                             pattern='[0-9]{10}'
                             style={
-                                nameError && {
+                                phoneError && {
                                     border: '2px solid #FF002A',
                                 }
                             }
                         />
-                        <p>{nameError || ' '}</p>
+                        <p>{phoneError || ' '}</p>
                     </div>
                     <div className='inputfield'>
                         <label htmlFor='dept'>
@@ -213,7 +225,6 @@ function Form() {
                                 <option value='ME'>ME</option>
                             </select>
                         </div>
-                        <p>{nameError || ' '}</p>
                     </div>
                     <div className='inputfield'>
                         <label htmlFor='class'>
@@ -229,7 +240,6 @@ function Form() {
                                 <option value='2'>2</option>
                             </select>
                         </div>
-                        <p>{nameError || ' '}</p>
                     </div>
                     {/* <div className='uploadImageContainer'>
 							<img
@@ -276,7 +286,6 @@ function Form() {
                             onFocus={(e) => {
                                 lookAt(e.target)
                             }}
-                            style={nameError && { border: '2px solid #FF002A' }}
                         />
                     </div>
                     <button

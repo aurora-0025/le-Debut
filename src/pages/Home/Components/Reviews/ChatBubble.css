@@ -21,3 +21,31 @@
     gap: 20px;
     justify-content: space-between;
   }
+
+  .chatBubble > .content > .buttonContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .chatBubble > .content > .buttonContainer > button {
+    padding: 10px 50px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .chatBubble > .content > .buttonContainer :nth-child(1) {
+    background-color: #42A5F5;
+    color: white;
+  }
+
+  .chatBubble > .content > .buttonContainer :nth-child(2):hover {
+    background-color: #dddddd;
+  }
+
+  .chatBubble > .content > .buttonContainer :nth-child(1):hover {
+    background-color: #71b8f1;
+    color: white;
+  }

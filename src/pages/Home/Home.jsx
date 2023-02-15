@@ -37,6 +37,7 @@ function Home () {
 				<div className='landing_dateWrapper'>
 					<img src={lego3brick} alt="" />
 					<h4>4th & 5th February 2023</h4>
+					<img className='closeBar' src={lego3brick} alt="" />
 				</div>
 				<button className='registerButton' type='button'>Grab Your Spot Now <div className='btnHole'/><div className='btnHole' /></button>
 			</div>
@@ -58,6 +59,16 @@ function Home () {
 				<h1>Reviews</h1>
 				<div className="reviewWrapper">
 					{reviewsData.map((s)=> (<ChatBubble name={s.name} review={s.review} key={s.name} />))}
+					<div className="chatBubble">
+						<div className="content">
+							<p>So What are you waiting for?</p>
+							<p>Ready to join us and let&apos;s do cool things that matter?</p>
+							<div className="buttonContainer">
+								<button type="button">Yes</button>
+								<button type="button">No</button> 
+							</div>
+						</div>
+    				</div>
 				</div>
 			</div>
 		</div>

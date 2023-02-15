@@ -4,11 +4,17 @@
     padding: 0 10%;
     height: 100px;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
 }
 
 #navBar > .logoWrapper {
     flex: 1.5;
+}
+
+#navBar > .logoWrapper > img {
+    /* width: 100px; */
+    width: clamp(60px, 10vw, 100px);
 }
 
 #navBar > .navLinks {
@@ -98,7 +104,7 @@
     width: 32px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 660px) {
     .navLinks * {
         display: block;
     }

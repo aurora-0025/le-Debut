@@ -13,7 +13,7 @@
 
 .landing > h1 {
     font-weight: 700;
-    font-size: max(40px, 6vw);
+    font-size: max(38px, 6vw);
     line-height: 90%;
     /* or 67px */
 
@@ -48,6 +48,10 @@
     color: #282828;
 }
 
+.closeBar {
+    display: none;
+}
+
 .registerButton {
     margin-top: 20px;
     cursor: pointer;
@@ -59,14 +63,14 @@
     border: 1.43505px solid #282828;
     border-radius: 47.8349px;
     font-weight: 700;
-    font-size: 23.7209px;
+    font-size: clamp(10px, 4vw,  23.7209px);
     line-height: 66.52%;
     /* or 16px */
 
     letter-spacing: -0.05em;
 
     color: #282828;
-    width: 300px;
+    width: clamp(200px, 50vw,  300px);
     transition: background-color 0.25s ease-in-out;
 }
 
@@ -88,6 +92,7 @@
         justify-content: center;
         margin: 10vh auto;
         text-align: center;
+        max-height: 180px;
     }
     .landing_dateWrapper {
         justify-content: center;
@@ -156,6 +161,10 @@
 
     .about > * {
         flex: 1;
+    }
+
+    .closeBar {
+        display: block;
     }
 }
 
