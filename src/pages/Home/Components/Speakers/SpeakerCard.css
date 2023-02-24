@@ -1,6 +1,6 @@
 .speakerCard > .speakerCardImg {
     position: relative;
-    background-image: url("assets/images/speakerBg.png");
+    background-image: url("../../../../assets/images/speakerBg.png");
     height: 300px;
     width: 300px;
 }
