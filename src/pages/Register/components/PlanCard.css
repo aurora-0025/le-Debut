@@ -14,12 +14,14 @@
     justify-content: space-between;
     flex-direction: column;
     height: 350px;
-    padding-top: 20px;
+    padding-top: 30px;
     word-wrap: break-word;
     white-space: pre-wrap;
     word-break: break-word;
 }
-
+.planCard > .CardContent > h3 {
+    font-weight: 100;
+}
 .planCard > .CardContent > h4 {
     font-size: 26px;
 }
@@ -30,12 +32,12 @@
 
 .price > h2 {
     font-family: 'Magilio';
-    font-size: 40px;
+    font-size: 60px;
     position: relative;
 }
 
 .planCard > .CardContent > .price > .rupee {
-    width: 10px;
+    width: 15px;
     position: absolute;
     top: 0;
     left: -20px;
@@ -43,10 +45,15 @@
 
 .planCard > .CardContent > hr {
     width: 100%;
+    background-color: white;
+    border: none;
+    color: white;
+    height: 2px;
 }
 
 .planCard > .CardContent > .desc {
     font-family: 'GoogleSans';
+    font-weight: 100;
     width: 100%;
     font-size: 22px;
     text-align: left;
@@ -54,6 +61,7 @@
 
 .planCard > .CardContent > .submit {
     margin: 0;
+    margin-top: 30px;
     width: 200px;
     height: 40px;
 }
