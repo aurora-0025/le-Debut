@@ -17,12 +17,15 @@ function Home () {
     const {store, actions} = useContext(AppContext);
 
 	useEffect(() => {
-        window.addEventListener('load', ()=>setLoading(false))
+        window.addEventListener('load', ()=> {
+			actions?.setBackgroundColor('#42a5f5');
+			setLoading(false)
+		})
 		setTimeout(() => { 
 			setLoadingTimer(false)
 		  }, 4000)
         return () => window.removeEventListener('load', ()=>setLoading(false))
-    }, [])
+    }, []);
 
 	useEffect(() => {
 	  actions.setSpeakersRef(speakersRef)

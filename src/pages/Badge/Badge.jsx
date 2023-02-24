@@ -28,8 +28,8 @@ function Badge() {
     const canvasRef = useRef(null)
 
     const removeBG = async (imageData) => {
-        let apiURL = 'https://remove-bg-api.fly.dev'
-        if (import.meta.env.DEV) apiURL = 'http://localhost:8080'
+        const apiURL = 'https://remove-bg-api.fly.dev'
+        // if (import.meta.env.DEV) apiURL = 'http://localhost:8080'
         fetch(`${apiURL}/removeBG`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -48,8 +48,6 @@ function Badge() {
     }
 
     const readUpload = (e) => {
-        // setLoading(true);
-        console.log("yes");
         if (e.target.files) {
             let file = e.target.files[0]
             console.log(file);
@@ -112,7 +110,7 @@ function Badge() {
             canvas.height = 256
             ctx.drawImage(img, 0, 0, 256, 256)
             base64Image = canvas.toDataURL('image/jpeg')
-            setLoadingMsg('Removing BG...')
+            setLoadingMsg('Generating Badge...')
             removeBG(base64Image)
         }
     }

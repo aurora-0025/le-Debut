@@ -1,0 +1,64 @@
+.planCard {
+    position: relative;
+    background-image: url("assets/images/planBg.png");
+    width:300px;
+    height: 400px;
+    background-size: 100% auto; 
+    background-repeat: no-repeat;  
+    padding: 20px;
+}
+
+.planCard > .CardContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 350px;
+    padding-top: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.planCard > .CardContent > h4 {
+    font-size: 26px;
+}
+
+.price  {
+    position: relative;
+}
+
+.price > h2 {
+    font-family: 'Magilio';
+    font-size: 40px;
+    position: relative;
+}
+
+.planCard > .CardContent > .price > .rupee {
+    width: 10px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+
+.planCard > .CardContent > hr {
+    width: 100%;
+}
+
+.planCard > .CardContent > .desc {
+    font-family: 'GoogleSans';
+    width: 100%;
+    font-size: 22px;
+    text-align: left;
+}
+
+.planCard > .CardContent > .submit {
+    margin: 0;
+    width: 200px;
+    height: 40px;
+}
+
+.planCard > .CardContent > .submit > p {
+    color: black;
+    font-size: 16px;
+}
