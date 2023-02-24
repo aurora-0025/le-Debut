@@ -48,9 +48,11 @@ function Badge() {
     }
 
     const readUpload = (e) => {
-        setLoading(true);
+        // setLoading(true);
+        console.log("yes");
         if (e.target.files) {
             let file = e.target.files[0]
+            console.log(file);
             const fileSize = file.size;
             const fileMb = fileSize / 1024 ** 2;
             if (fileMb >= 17) {
@@ -70,6 +72,7 @@ function Badge() {
          * @type {HTMLCanvasElement} canvas
          */
         setRemovedBGImage(null)
+        setLoading(true);
         setCropWindow(false)
         setLoadingMsg('Cropping Image..')
         console.log(image);
@@ -113,6 +116,7 @@ function Badge() {
             removeBG(base64Image)
         }
     }
+
     useEffect(() => {
         if (removedBGImage) {
             /**
