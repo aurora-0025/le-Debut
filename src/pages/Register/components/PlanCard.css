@@ -1,6 +1,6 @@
 .planCard {
     position: relative;
-    background-image: url("assets/images/planBg.png");
+    background-image: url("../../../assets/images/planBg.png");
     width:300px;
     height: 400px;
     background-size: 100% auto; 
