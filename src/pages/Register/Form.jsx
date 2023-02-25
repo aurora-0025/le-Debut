@@ -430,6 +430,7 @@ function Form() {
                             Choose a photo
                         </label>
                     </div> */}
+                        {plan !== "excl. food pass" && (
                                 <div className='inputfield radioButtonField'>
                                     <label htmlFor='payment'>
                                         Select your preferred payment mode<span>*</span>
@@ -468,7 +469,7 @@ function Form() {
                                             </label>
                                         </span>
                                     </div>
-                                </div>
+                                </div> )}
                                 <div className='inputfield textarea'>
                                     <label htmlFor='desc'>
                                         Anything else you would like to share with us?
