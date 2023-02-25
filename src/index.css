@@ -69,7 +69,7 @@ body > #root > div {
   font-family: 'GoogleSans';
   src: url('/assets/fonts/GOOGLESANS-REGULAR.TTF') format('truetype');
   font-weight: 400;
-  font-display: block;
+  font-display: swap;
   font-style: normal;
 }
 
@@ -94,6 +94,6 @@ body > #root > div {
   font-family: 'Magilio';
   src: url('/assets/fonts/MagilioRegular-Yzv2O.ttf') format('truetype');
   font-weight: 400;
-  font-display: auto;
+  font-display: swap;
   font-style: normal;
 }

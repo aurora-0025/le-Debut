@@ -173,7 +173,7 @@ function Badge() {
                 ctx.drawImage(fgImg, 0, 0, canvas.width, canvas.height)
                 ctx.clip()
                 ctx.fillStyle = 'rgba(255, 255, 255,  0.9)'
-                ctx.font = 'bold 15px GoogleSans'
+                ctx.font = 'bold 15px Arial'
                 ctx.textBaseline = 'middle'
                 ctx.textAlign = 'center'
                 roundedImage(ctx, 0, 0, canvas.width, canvas.height, 18)
