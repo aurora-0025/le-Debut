@@ -18,15 +18,16 @@ function NavBar() {
     useEffect(() => {
         if (location.pathname === '/') {
             setActiveLink('home')
+            actions.setFooterColor('#42a5f5')
         }
         else {
             setActiveLink('register')
+            actions.setFooterColor('#1a1a1a')
         }
     }, [location])
     
 
     const executeScroll = (link) => {
-        console.log(store);
         if(location.pathname !== '/') {
             navigate('/');
         }

@@ -278,7 +278,7 @@ function Form() {
                                 </div>
                                 <div className='inputfield'>
                                     <label htmlFor='mail'>
-                                        Your Email ID<span>*</span>
+                                        Email ID<span>*</span>
                                     </label>
                                     <input
                                         placeholder='Enter your Email ID'
@@ -300,7 +300,7 @@ function Form() {
                                 </div>
                                 <div className='inputfield'>
                                     <label htmlFor='phno'>
-                                        Your Contact Number<span>*</span>
+                                        Contact Number<span>*</span>
                                     </label>
                                     <input
                                         placeholder='Enter your Contact Number'
@@ -359,7 +359,7 @@ function Form() {
                                 </div>
                                 <div className='inputfield'>
                                     <label htmlFor='dept'>
-                                        Your Department<span>*</span>
+                                        Department<span>*</span>
                                     </label>
                                     <div className='dropdown'>
                                         <select
@@ -380,7 +380,7 @@ function Form() {
                                 </div>
                                 <div className='inputfield'>
                                     <label htmlFor='class'>
-                                        Your Class<span>*</span>
+                                        Class<span>*</span>
                                     </label>
                                     <div className='dropdown'>
                                         <select

@@ -19,7 +19,10 @@ export function ContextWrapper({children}) {
 		setLoadingMsg: msg => setStore({ ...store, loadingMsg: msg }),
 		setBackgroundColor: color => {
 			setStore({...store, backgroundColor: color})
-			// setStore({...store, footerColor: `${color==="#42a5f5"?"#1a1a1a":"#42a5f5"}`})
+			setStore({...store, footerColor: `${color==="#42a5f5"?"#1a1a1a":"#42a5f5"}`})
+		},
+		setFooterColor: color => {
+			setStore({...store, footerColor: color})
 		},
 	});
 	const appProviderValue= useMemo(() => ({ store, actions }), [store, actions]);

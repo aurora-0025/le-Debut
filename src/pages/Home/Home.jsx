@@ -28,12 +28,11 @@ function Home() {
         })
         setTimeout(() => {
             setLoadingTimer(false)
-        }, 4000)
+        }, 2000)
         return () => window.removeEventListener('load', () => setLoading(false))
     }, [])
 
     useEffect(() => {
-		console.log(speakersRef);
         actions.setSpeakersRef(speakersRef)
     }, [speakersRef])
 
@@ -70,7 +69,7 @@ function Home() {
                 <div className='player' />
             </div>
 
-            <div className='about1'  ref={speakersRef}>
+            <div className='about1' ref={speakersRef}>
                 <div className='title'>
 				<div className="titleContent">
                     <h1>our stellar speakers </h1>

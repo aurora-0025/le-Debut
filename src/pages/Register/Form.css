@@ -97,7 +97,7 @@
   }
   .inputfield > label {
     display: block;
-    font-size: clamp(14px, 1.9vw,33px);
+    font-size: clamp(14px, 1.9vw,20px);
     font-weight: 700;
     letter-spacing: -0.05em;
   }
@@ -196,7 +196,7 @@
   }
 
   .vradioContainer {
-    margin-top: 5px;
+    margin-top: 20px;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -228,10 +228,12 @@
   }
 
   .option > label {
-    font-size: 1.25rem;
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: 700;
   }
 
   .hradioContainer {
+    margin-top: 20px;
     display: flex;
     gap: 20px;
   }
