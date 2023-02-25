@@ -15,14 +15,21 @@
     flex-direction: column;
     height: 350px;
     padding-top: 30px;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    word-break: break-word;
 }
-.planCard > .CardContent > h3 {
+
+.planCard > .CardContent > .cardHead {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+.planCard > .CardContent > .cardHead > h3 {
     font-weight: 100;
 }
-.planCard > .CardContent > h4 {
+.planCard > .CardContent > .cardHead > h4 {
     font-size: 26px;
 }
 
@@ -36,14 +43,26 @@
     position: relative;
 }
 
-.planCard > .CardContent > .price > .rupee {
+.planCard > .CardContent > .cardHead > .price > .rupee {
     width: 15px;
     position: absolute;
     top: 0;
     left: -20px;
 }
 
-.planCard > .CardContent > hr {
+.planCard > .CardContent > .cardFooter {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    height: 169px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.planCard > .CardContent > .cardHead > hr {
     width: 100%;
     background-color: white;
     border: none;
@@ -51,7 +70,7 @@
     height: 2px;
 }
 
-.planCard > .CardContent > .desc {
+.planCard > .CardContent > .cardFooter > .desc {
     font-family: 'GoogleSans';
     font-weight: 100;
     width: 100%;
@@ -59,14 +78,14 @@
     text-align: left;
 }
 
-.planCard > .CardContent > .submit {
+.planCard > .CardContent > .cardFooter > .submit {
     margin: 0;
     margin-top: 30px;
     width: 200px;
     height: 40px;
 }
 
-.planCard > .CardContent > .submit > p {
+.planCard > .CardContent > .cardFooter > .submit > p {
     color: black;
     font-size: 16px;
 }
