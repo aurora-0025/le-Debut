@@ -7,14 +7,16 @@
 
 .speakerCard > .speakerCardImg > .speakerImg {
     position: absolute;
-    height: 300px;
-    width: 289px;
+    height: 230px;
+    width: 220px;
     filter: saturate(0);
 }
 
 .speakerCard  {
+    
     text-align: center;
     color: white;
+   
 }
 
 .speakerCard > h3 {

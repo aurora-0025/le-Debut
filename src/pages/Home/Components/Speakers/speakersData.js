@@ -1,34 +1,30 @@
 const speakers = [
     {
-        name: 'Ferwin Lopez',
-        img: 'ferwin.png',
-        position: 'UI/UX Designer Google'
+        name: 'le debut',
+        img: 'spk1.png',
+        position: 'techista'
     },
     {
-        name: 'Test Name',
-        img: 'ferwin.png',
-        position: 'UI/UX Designer Google'
+        name: 'le debut',
+        img: 'spk2.png',
+        position: 'designhub'
     },
     {
-        name: 'Unique Name',
-        img: 'ferwin.png',
-        position: 'UI/UX Designer Google'
+        name: 'le debut',
+        img: 'spk3.png',
+        position: 'foodie'
     },
     {
-        name: 'Unique Name2',
-        img: 'ferwin.png',
-        position: 'UI/UX Designer Google'
+        name: 'le debut',
+        img: 'spk4.png',
+        position: 'lounge'
     },
     {
-        name: 'Unique Name3',
-        img: 'ferwin.png',
-        position: 'UI/UX Designer Google'
+        name: 'le debut',
+        img: 'spk5.png',
+        position: 'arcade'
     },
-    {
-        name: 'Unique Name4',
-        img: 'ferwin.png',
-        position: 'UI/UX Designer Google'
-    },
+    
 ]
 
 export default speakers;

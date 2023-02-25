@@ -2,18 +2,22 @@
     position: relative;
     z-index: 1;
     overflow-x: clip;
+   /* margin-top: -30px;*/
 }
 
-#home > .landing {
+.main > .landing {
     display: flex;
+    text-align: center;
     flex-direction: column;
     padding: 20px 10%;
     z-index: 1;
+
 }
 
 .landing > h1 {
     font-weight: 700;
-    font-size: max(38px, 6vw);
+    /* font-size: max(38px, 6vw);*/
+    font-size: max(23px, 5vw);
     line-height: 90%;
     /* or 67px */
 
@@ -23,8 +27,10 @@
 
 .landing > h2 {
     padding: 10px 0;
-    font-weight: 500;
-    font-size: max(24px, 3vw);
+    margin-bottom: 10px;
+    font-weight: 300;
+    /*font-size: max(24px, 3vw);*/
+    font-size: max(5px, 3.5vw);
     line-height: 90%;
     /* or 45px */
 
@@ -35,17 +41,24 @@
 
 .landing_dateWrapper {
     display: flex;
+    margin: auto;
     align-items: center;
     gap: 20px;
 }
 
 .landing_dateWrapper > h4 {
     font-weight: 500;
-    font-size: max(24px, 2.5vw);
+    /* font-size: max(24px, 2.5vw);*/
+    font-size: max(16px, 1.8vw);
     line-height: 90%;
+    margin-bottom:19px;
     /* or 28px */
     letter-spacing: -0.02em;
     color: #282828;
+}
+
+.landing_dateWrapper > img {
+    margin-bottom: 12px;
 }
 
 .closeBar {
@@ -53,7 +66,7 @@
 }
 
 .registerButton {
-    margin-top: 20px;
+    margin: auto;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -102,6 +115,7 @@
 /* ABOUT SECTION */
 
 .about {
+    text-align: center;
     z-index: 2;
     height: max(100vh, 500px);
     margin-top: 312px;
@@ -113,6 +127,28 @@
     overflow-x: clip;
     z-index: 2;
     position: relative;
+}
+
+.about1 {
+    height: max(100vh, 500px);
+    margin: -20px 0;
+    padding: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 2;
+    justify-content: space-evenly;
+    background-color: #42a5f5;
+    overflow-x: clip;
+    z-index: 2;
+    position: relative;
+}
+
+.about1 > .title > h1 {
+    font-weight: 700;
+    font-size: max(20px, 6.7vw);
+    line-height: 111.2%;
+    letter-spacing: -0.055em;
+    color: #ffffff;
 }
 
 .legoChars {
@@ -136,7 +172,7 @@
 
 .about > .title > h1 {
     font-weight: 700;
-    font-size: max(55px, 7vw);
+    font-size: max(10px, 6.5vw);
     line-height: 111.2%;
     letter-spacing: -0.055em;
     color: #ffffff;
@@ -145,9 +181,14 @@
     color: #42a5f5;
 }
 
+.about1 > .title > h1 > span {
+    color: #1a1a1a;
+}
+
 .about > .player {
     width: 280px;
     height: 250px;
+    margin:0 auto;
     border-radius: 20px;
     background-color: #42a5f5;
 }
@@ -155,6 +196,7 @@
 @media screen and (min-width: 900px) {
     .about {
         flex-direction: row;
+        height: max(10vh, 500px);
         justify-content: center;
         align-items: center;
     }
@@ -163,8 +205,83 @@
         flex: 1;
     }
 
+    .about1 {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
     .closeBar {
         display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:80vh;
+        margin-top: 80px;
+    }
+
+    .legoChars {
+        margin: 39px 0 0 0;
+        width: 500px;
+    }
+
+    .about > .title > h1 {
+        font-size: max(60px, 6.2vw);
+       
+    }
+    
+    .about1 > .title >h1  {
+        font-size: max(40px, 6vw);
+        margin-left: 10px;
+    }
+    
+    .player{
+        margin-top: 50px;
+        margin-bottom: 85px;
+    }
+
+    .player > img{
+        height:300px;
+    }
+
+    .landing{
+        margin-bottom: -50px;
+    }
+
+    .landing > h1 {
+        font-size: max(69px, 5vw)
+    }
+    
+    .landing > h2 {
+        margin-top: 28px;
+        margin-bottom: 28px;
+        font-size: max(39px, 5.7vw)
+    }
+
+    .landing_dateWrapper > h4 {
+        font-size: max(24px, 5.7vw)
+    }
+
+    .registerButton {
+        margin: 48px auto;
+        font-size: max(25px, 4.7vw);
+        width: clamp(300px, 80vw, 350px);
+        padding: 20px 0;
+    }
+
+    .main > img {
+        height: 40vh;
+        
+    }
+
+    .reviews > h1{
+        font-weight: 200;
+        font-size: max(20px, 3vw);
     }
 }
 
@@ -176,7 +293,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    background-color: #42a5f5;
+    background-color: #1a1a1a;
     overflow-x: clip;
     z-index: 2;
     position: relative;
@@ -185,16 +302,21 @@
 .speaker > h1 {
     padding-bottom: 10%;
     font-weight: 700;
-    font-size: max(70px, 8vw);
+    font-size: max(40px, 8vw);
     line-height: 102px;
     color: #FFFFFF;
 }
 
+.speakerCard{
+    align-items: center;
+}
+
 .speakerCardsWrapper {
     display: grid;
-    background-color: #42a5f5;
+    place-items: center;
+    background-color: #1a1a1a;
     grid-template-columns: repeat(auto-fit, minmax(289px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 40px;
     padding: 20px;
 }
 
@@ -260,3 +382,11 @@
     border-right: 40px solid transparent;
 }
 
+@media screen and (max-width: 900px) {
+
+    .reviews > h1{
+        padding: 40px  0;
+        font-weight: 500;
+        font-size: max(37px, 1vw);
+    }
+}
