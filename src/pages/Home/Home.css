@@ -95,11 +95,35 @@
     background-color: white;
 }
 
+.highlight {
+    animation: highlight 0.5s ease-in-out 2;
+}
+
 .registerButton > .btnHole {
     height: 20px;
     aspect-ratio: 1/1;
     border: 2.39174px solid #282828;
     border-radius: 100%;
+}
+
+@keyframes highlight {
+    0% {
+        transform: scale(100%);
+    }
+    25% {
+        transform:  scale(105%);
+        background-color: #FFFFFF;
+    }
+    50% {
+        transform:  scale(100%);
+    }
+    75% {
+        transform:  scale(105%);
+        background-color: #ffdb03;
+    }
+    100% {
+        transform:  scale(100%);
+    }
 }
 
 @media screen and (min-width: 900px) {

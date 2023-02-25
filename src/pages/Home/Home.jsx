@@ -16,6 +16,9 @@ function Home() {
     const [loading, setLoading] = useState(false)
     const [loadingTimer, setLoadingTimer] = useState(true)
     const [loadingMsg, setLoadingMsg] = useState(null)
+    const [buttonHighlight, setButtonHighlight] = useState(false)
+
+
     const speakersRef = useRef(null)
     const sponsorsRef = useRef(null)
     const landingRef = useRef(null)
@@ -51,7 +54,7 @@ function Home() {
                         <h4>25th & 26th March 2023</h4>
                         <img className='closeBar' src={lego3brick} alt='' />
                     </div>
-                    <a href='/register' className='registerButton' type='button'>
+                    <a href='/register' className={`registerButton ${buttonHighlight&&'highlight'}`} type='button'>
                         Grab Your Spot Now <div className='btnHole' />
                         <div className='btnHole' />
                     </a>
@@ -146,7 +149,12 @@ function Home() {
                             <p>Ready to join us and let&apos;s do cool things that matter?</p>
                             <div className='buttonContainer'>
                                 <button type='button' onClick={()=> {
-									landingRef?.current.scrollIntoView({ behavior: 'smooth', block: 'end' })
+									landingRef?.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                                    setButtonHighlight(true);
+                                    setTimeout(() => {
+                                        setButtonHighlight(false)
+                                    }, 2000);
+
 								}}>Yes</button>
                                 <button type='button'>No</button>
                             </div>
