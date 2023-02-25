@@ -31,7 +31,7 @@ function NavBar() {
                 </li>
                 <li onKeyDown={executeScroll} onClick={executeScroll}>Speakers</li>
                 <li>
-                    <a href='/badge'>Badge</a>
+                    <a href='#sponsers'>Sponsers</a>
                 </li>
                 <li>
                     <a href='/register'>Register</a>
