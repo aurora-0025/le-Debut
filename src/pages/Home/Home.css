@@ -245,6 +245,10 @@
         margin-bottom: 85px;
     }
 
+    .player > img{
+        height:300px;
+    }
+
     .landing{
         margin-bottom: -50px;
     }
@@ -383,6 +387,6 @@
     .reviews > h1{
         padding: 40px  0;
         font-weight: 500;
-        font-size: max(43px, 10vw);
+        font-size: max(37px, 1vw);
     }
 }
