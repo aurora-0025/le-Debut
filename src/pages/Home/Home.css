@@ -207,6 +207,7 @@
 }
 .about > .title > h1 > span {
     color: #42a5f5;
+    font-weight: 700;
 }
 
 .about > .player {
