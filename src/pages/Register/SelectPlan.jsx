@@ -19,7 +19,7 @@ function SelectPlan({setPlan}) {
             <div className="planCardsWrapper">
                 <PlanCard plan='excl. food pass' price='150' desc={<p>you may plan your food arrangements accordingly </p>} setPlan={setPlan}/>
                 <PlanCard plan='incl. food pass (veg)' price='250' desc={<p>food pass includes:<br/>*refreshments<br/>*veg lunch</p>} setPlan={setPlan}/>
-                <PlanCard plan='excl. food pass (non)' price='300' desc={<p>food pass includes:<br/>*refreshments<br/>*non-veg lunch</p>} setPlan={setPlan}/>
+                <PlanCard plan='incl. food pass (non)' price='300' desc={<p>food pass includes:<br/>*refreshments<br/>*non-veg lunch</p>} setPlan={setPlan}/>
             </div>
         </div>
     </div>

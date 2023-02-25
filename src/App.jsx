@@ -1,70 +1,37 @@
+/* eslint-disable no-constant-condition */
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useContext, useEffect, useState } from 'react'
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Form from './pages/Register/Form'
 import Home from './pages/Home/Home'
 import Footer from './components/Footer/Footer'
 import Badge from './pages/Badge/Badge'
-import { AppContext } from './context/AppContext';
+import { AppContext } from './context/AppContext'
 
 function App() {
-    const {store, actions} = useContext(AppContext);
-    const  [bgColor, setBgColor] = useState("#42a5f5");
+    const { store, actions } = useContext(AppContext)
+    const [bgColor, setBgColor] = useState('#42a5f5')
+    const location = useLocation()
 
     useEffect(() => {
-        console.log(store);
-        if(store.backgroundColor !== bgColor) {
-            setBgColor(store.backgroundColor);
+        if (store.backgroundColor !== bgColor) {
+            setBgColor(store.backgroundColor)
         }
     }, [store])
-    
+
     return (
-        <div className='App' style={{backgroundColor: bgColor}}>
+        <div className='App' style={{ backgroundColor: bgColor }}>
             <div className='overlay' />
+            <NavBar />
             <Routes>
-                <Route
-                    path='/'
-                    element={
-                        <>
-                            <NavBar />
-                            <Home />
-                            <Footer />
-                        </>
-                    }
-                />
-                <Route
-                    path='/badge'
-                    element={
-                        <>
-                            <NavBar />
-                            <Badge />
-                            <Footer />
-                        </>
-                    }
-                />
-                <Route
-                    path='/register'
-                    element={
-                        <>
-                            <NavBar />
-                            <Form />
-                            <Footer />
-                        </>
-                    }
-                />
-                <Route
-                    path='*'
-                    element={
-                        <>
-                            <NavBar />
-                            <Home />
-                            <Footer />
-                        </>
-                    }
-                />
+                <Route path='/' element={<Home />} />
+                <Route path='/badge' element={<Badge />} />
+                <Route path='/register' element={<Form />} />
+                <Route path='*' element={<Home />} />
             </Routes>
+            <Footer />
             {/* <Form /> */}
         </div>
     )

@@ -89,14 +89,14 @@ function Form() {
             setPaymentScreenshotSrc(null)
         }
 
-        if (selectedPayment === 'bank' && page !== 2) {
+        if (selectedPayment === 'bank' && page !== 2 && plan !== "excl. food pass") {
             setSubmitText('Submit')
             setPage(2)
             legoRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
             return
         }
 
-        if (selectedPayment === 'gpay' && page !== 3) {
+        if (selectedPayment === 'gpay' && page !== 3 && plan !== "excl. food pass") {
             setSubmitText('Submit')
             setPage(3)
             legoRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })

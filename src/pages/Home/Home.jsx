@@ -17,6 +17,7 @@ function Home() {
     const [loadingTimer, setLoadingTimer] = useState(true)
     const [loadingMsg, setLoadingMsg] = useState(null)
     const speakersRef = useRef(null)
+    const sponsorsRef = useRef(null)
     const landingRef = useRef(null)
     const { store, actions } = useContext(AppContext)
 
@@ -32,8 +33,13 @@ function Home() {
     }, [])
 
     useEffect(() => {
+		console.log(speakersRef);
         actions.setSpeakersRef(speakersRef)
     }, [speakersRef])
+
+    useEffect(() => {
+        actions.setSponsorsRef(sponsorsRef)
+    }, [sponsorsRef])
 
     return !loading && !loadingTimer ? (
         <div id='home'>
@@ -64,7 +70,7 @@ function Home() {
                 <div className='player' />
             </div>
 
-            <div className='about1'>
+            <div className='about1'  ref={speakersRef}>
                 <div className='title'>
 				<div className="titleContent">
                     <h1>our stellar speakers </h1>
@@ -115,7 +121,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className='about1 ' id='sponsors'>
+            <div className='about1 ' id='sponsors' ref={sponsorsRef}>
                 <div className='title'>
 					<div className="titleContent">
 						<h1>our stellar sponsors </h1>

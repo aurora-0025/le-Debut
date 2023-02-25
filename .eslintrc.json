@@ -18,7 +18,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-refresh"
     ],
     "rules": {
         "jsx-a11y/no-noninteractive-element-interactions": ["off"],
@@ -37,6 +38,7 @@
         "react/prop-types": "off",
         "camelcase": "error",
         "spaced-comment": "error",
-        "no-duplicate-imports": "error"
+        "no-duplicate-imports": "error",
+        "react-refresh/only-export-components": "warn"
     }
 }

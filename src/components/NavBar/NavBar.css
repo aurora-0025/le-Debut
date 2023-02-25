@@ -63,6 +63,10 @@
     display: none;
 }
 
+.navLinks li {
+    position: relative;
+}
+
 .navLinks li > a:hover {
     color: var(--lego-yellow) !important;
 } 
@@ -70,7 +74,6 @@
 .navLinks li:hover {
     color: var(--lego-yellow) !important;
 } 
-
 
 #navBar > .navLinks li {
     cursor: pointer;
@@ -114,7 +117,24 @@
         display: none;
     }
 
-    
+    .navLinks .activelink::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 10px;
+        width: 30px;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-size: cover;
+        background-image: url("../../assets/images/lego-brick.png");
+        transition: width 0.2s ease-in-out;
+    }
+
+    .activelink a {
+        font-weight: 700;
+    }
 }
 
 @media screen and (max-width:900px) {
