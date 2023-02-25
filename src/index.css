@@ -61,13 +61,13 @@ body > #root > div {
   /* Handle */
   ::-webkit-scrollbar-thumb {
       /* background: var(--lego-yellow); */
-      background: url('/assets/images/scroll_bar.png');
+      background: url('./assets/images/scroll_bar.png');
   }
 }
 
 @font-face {
   font-family: 'GoogleSans';
-  src: url('/assets/fonts/GOOGLESANS-REGULAR.TTF') format('truetype');
+  src: url('./assets/fonts/GOOGLESANS-REGULAR.TTF') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -75,7 +75,7 @@ body > #root > div {
 
 @font-face {
   font-family: 'GoogleSans';
-  src: url('/assets/fonts/GOOGLESANS-BOLD.TTF') format('truetype');
+  src: url('./assets/fonts/GOOGLESANS-BOLD.TTF') format('truetype');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -84,7 +84,7 @@ body > #root > div {
 
 @font-face {
   font-family: 'GoogleSans';
-  src: url('/assets/fonts/GOOGLESANS-MEDIUM.TTF') format('truetype');
+  src: url('./assets/fonts/GOOGLESANS-MEDIUM.TTF') format('truetype');
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -92,7 +92,7 @@ body > #root > div {
 
 @font-face {
   font-family: 'Magilio';
-  src: url('/assets/fonts/MagilioRegular-Yzv2O.ttf') format('truetype');
+  src: url('./assets/fonts/MagilioRegular-Yzv2O.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
