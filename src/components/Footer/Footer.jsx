@@ -8,7 +8,7 @@ function Footer() {
     const {store, actions} = useContext(AppContext);
     const executeScroll = () => store.speakersRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })  
   return (
-    <div className='Footer'>
+    <div className='Footer' style={{backgroundColor: store.footerColor}}>
         <div className="footer_about">
             <h3>Google Developer Student Clubs, MBCET</h3>
             <p>Google Developer Student Clubs are university based community groups for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome.</p>

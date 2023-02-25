@@ -8,12 +8,13 @@ export function ContextWrapper({children}) {
 		loading: null,
 		loadingMsg: null,
 		backgroundColor: '#42a5f5',
+		footerColor: '#1a1a1a'
 	});
 	const [ actions, setActions ] = useState({
 		setSpeakersRef: ref => setStore({ ...store, speakersRef: ref }),
 		setLoading: bool => setStore({ ...store, loading: bool }),
 		setLoadingMsg: msg => setStore({ ...store, setLoadingMsg: msg }),
-		setBackgroundColor: color => setStore({...store, backgroundColor: color})
+		setBackgroundColor: color => setStore({...store, backgroundColor: color, footerColor: `${color==="#42a5f5"?"#1a1a1a":"#42a5f5"}`})
 	});
 	const appProviderValue= useMemo(() => ({ store, actions }), [store, actions]);
 	return (
