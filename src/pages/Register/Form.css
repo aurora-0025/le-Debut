@@ -112,8 +112,8 @@
     background: #FBFBFB;
     border: 1px solid #ADADAD;
     border-radius: 9px;
-    font-weight: 500;
-    font-size: 22px;
+    font-size: clamp(15px, 3vw, 18px);
+    font-weight: 700;
   } 
   
   .inputfield > textarea {
@@ -126,7 +126,7 @@
     color: #FF002A;
   }
   .inputfield > p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     color: #FF002A;
   }
@@ -292,12 +292,14 @@
    */
   .payment > h1 {
     margin-bottom: 30px;
-    font-size: clamp(20px, 5vw,35px);
+    font-size: clamp(16px, 7.5vw,45px);
   }
   .payment h3 {
-    color: black;
-    font-size: clamp(20px, 5vw,35px);
-    margin-top: 20px;
+    font-size: clamp(20px, 2vw,37px);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
   }
 
   .payment h3 > span {
@@ -307,11 +309,12 @@
   .payment h4 {
     margin: 0;
     font-size: clamp(8px, 3.5vw,22px);
+    font-weight: 700;
     color: black;
   }
 
   .payment h4 > span {
-    font-weight: 100;
+    font-weight: 400;
   }
 
   .paymentDetails {
@@ -339,6 +342,7 @@
 
   .payment > .qrcodeContainer > h3 {
     font-size: clamp(20px, 6.5vw,25px);
+    font-weight: 700;
   }
 
   .payment > .qrcodeContainer > img {

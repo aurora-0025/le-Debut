@@ -142,6 +142,7 @@ function Form() {
                 console.log(data)
                 if (data.success) {
                     actions?.setBackgroundColor('#42a5f5');
+                    actions?.setFooterColor('#42a5f5');
                     setShowSuccessPage(true);
                 }
             })
