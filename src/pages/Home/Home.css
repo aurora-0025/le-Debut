@@ -183,7 +183,7 @@
 
 .about1 > .title > .titleContent > h1 {
     font-weight: 700;
-    font-size: max(20px, 5vw);
+    font-size: max(30px, 5vw);
     line-height: 111.2%;
     letter-spacing: -0.055em;
     color: #ffffff;
@@ -305,7 +305,7 @@
     }
 
     .player > img{
-        height:300px;
+        height:250px;
     }
 
     .landing{
