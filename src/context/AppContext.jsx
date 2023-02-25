@@ -13,8 +13,8 @@ export function ContextWrapper({children}) {
 		footerColor: '#42a5f5',
 	});
 	const [ actions, setActions ] = useState({
-		setSpeakersRef: ref => setStore({ ...store, speakersRef: ref }),
-		setSponsorsRef: ref => setStore({ ...store, sponsorsRef: ref }),
+		setSpeakersRef: speakerRef => setStore({ ...store, speakersRef: speakerRef }),
+		setSponsorsRef: sponsorRef => setStore({ ...store, sponsorsRef: sponsorRef }),
 		setLoading: bool => setStore({ ...store, loading: bool }),
 		setLoadingMsg: msg => setStore({ ...store, loadingMsg: msg }),
 		setBackgroundColor: color => {

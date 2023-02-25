@@ -18,13 +18,17 @@ function Home() {
     const [loadingMsg, setLoadingMsg] = useState(null)
     const [buttonHighlight, setButtonHighlight] = useState(false)
 
-
     const speakersRef = useRef(null)
     const sponsorsRef = useRef(null)
     const landingRef = useRef(null)
+
     const { store, actions } = useContext(AppContext)
 
     useEffect(() => {
+        if(speakersRef) actions.setSpeakersRef(speakersRef);
+        if(sponsorsRef) actions.setSponsorsRef(sponsorsRef);
+        actions.setSponsorsRef(sponsorsRef);
+        
         window.addEventListener('load', () => {
             actions?.setBackgroundColor('#42a5f5')
             setLoading(false)
@@ -40,6 +44,7 @@ function Home() {
     }, [speakersRef])
 
     useEffect(() => {
+        if(!sponsorsRef) return;
         actions.setSponsorsRef(sponsorsRef)
     }, [sponsorsRef])
 

@@ -89,14 +89,14 @@ function Form() {
             setPaymentScreenshotSrc(null)
         }
 
-        if (selectedPayment === 'bank' && page !== 2 && plan !== "excl. food pass") {
+        if (selectedPayment === 'bank' && page !== 2) {
             setSubmitText('Submit')
             setPage(2)
             legoRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
             return
         }
 
-        if (selectedPayment === 'gpay' && page !== 3 && plan !== "excl. food pass") {
+        if (selectedPayment === 'gpay' && page !== 3) {
             setSubmitText('Submit')
             setPage(3)
             legoRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -431,7 +431,6 @@ function Form() {
                             Choose a photo
                         </label>
                     </div> */}
-                        {plan !== "excl. food pass" && (
                                 <div className='inputfield radioButtonField'>
                                     <label htmlFor='payment'>
                                         Select your preferred payment mode<span>*</span>
@@ -470,7 +469,7 @@ function Form() {
                                             </label>
                                         </span>
                                     </div>
-                                </div> )}
+                                </div>
                                 <div className='inputfield textarea'>
                                     <label htmlFor='desc'>
                                         Anything else you would like to share with us?
