@@ -10,23 +10,25 @@ import SpeakerCard from './Components/Speakers/SpeakerCard'
 import ChatBubble from './Components/Reviews/ChatBubble'
 import { AppContext } from '../../context/AppContext'
 import Loader from '../../components/Loading/Loader'
+import EventCard from './Components/Events/EventCard'
 
 function Home() {
     const [loading, setLoading] = useState(false)
     const [loadingTimer, setLoadingTimer] = useState(true)
     const [loadingMsg, setLoadingMsg] = useState(null)
     const speakersRef = useRef(null)
+    const landingRef = useRef(null)
     const { store, actions } = useContext(AppContext)
 
-	useEffect(() => {
-        window.addEventListener('load', ()=> {
-			actions?.setBackgroundColor('#42a5f5');
-			setLoading(false)
-		})
-		setTimeout(() => { 
-			setLoadingTimer(false)
-		  }, 4000)
-        return () => window.removeEventListener('load', ()=>setLoading(false))
+    useEffect(() => {
+        window.addEventListener('load', () => {
+            actions?.setBackgroundColor('#42a5f5')
+            setLoading(false)
+        })
+        setTimeout(() => {
+            setLoadingTimer(false)
+        }, 4000)
+        return () => window.removeEventListener('load', () => setLoading(false))
     }, [])
 
     useEffect(() => {
@@ -36,18 +38,18 @@ function Home() {
     return !loading && !loadingTimer ? (
         <div id='home'>
             <div className='main'>
-                <div className='landing'>
+                <div className='landing' ref={landingRef}>
                     <h1>freshers ahoy !</h1>
                     <h2>it&apos;s time to make your debut</h2>
                     <div className='landing_dateWrapper'>
                         <img src={lego3brick} alt='' />
-                        <h4>4th & 5th February 2023</h4>
+                        <h4>25th & 26th March 2023</h4>
                         <img className='closeBar' src={lego3brick} alt='' />
                     </div>
-                    <button className='registerButton' type='button'>
+                    <a href='/register' className='registerButton' type='button'>
                         Grab Your Spot Now <div className='btnHole' />
                         <div className='btnHole' />
-                    </button>
+                    </a>
                 </div>
 
                 <img alt='' src={charsImage} className='legoChars' />
@@ -64,92 +66,63 @@ function Home() {
 
             <div className='about1'>
                 <div className='title'>
+				<div className="titleContent">
                     <h1>our stellar speakers </h1>
                     <h1>
-                        <span>to be unlocked soon.</span>
+                        <span>to be unlocked soon</span>.
                     </h1>
+					</div>
                 </div>
                 <div className='player'>
                     <img src={stellar} alt='' />
                 </div>
             </div>
 
-            <div ref={speakersRef} className='speaker'>
+            <div className='event'>
                 <h1>
-                    keep an <img src={eye} style={{ width: '60px', height: '70px' }} alt='' /> out
-                    for
+                    keep an{' '}
+                    <img id='eyesImg' src={eye} style={{ width: '60px', height: '70px' }} alt='' />{' '}
+                    out for
                 </h1>
-                <div className='speakerCardsWrapper'>
-                    <div className='speakerCard'>
-                        <div className='speakerCardImg'>
-                            <div
-                                className='speakerImg'
-                                style={{
-                                    backgroundImage: `url("/assets/images/speakersImgs/spk1.png")`,
-                                }}
-                            />
-                        </div>
-                        <h3>le debut </h3>
-                        <h4>techista</h4>
-                    </div>
-                    <div className='speakerCard'>
-                        <div className='speakerCardImg'>
-                            <div
-                                className='speakerImg'
-                                style={{
-                                    backgroundImage: `url("/assets/images/speakersImgs/spk1.png")`,
-                                }}
-                            />
-                        </div>
-                        <h3>le debut </h3>
-                        <h4>designhub</h4>
-                    </div>
-                    <div className='speakerCard'>
-                        <div className='speakerCardImg'>
-                            <div
-                                className='speakerImg'
-                                style={{
-                                    backgroundImage: `url("/assets/images/speakersImgs/spk1.png")`,
-                                }}
-                            />
-                        </div>
-                        <h3>le debut </h3>
-                        <h4>foodie</h4>
-                    </div>
-
-                    <div className='speakerCard'>
-                        <div className='speakerCardImg'>
-                            <div
-                                className='speakerImg'
-                                style={{
-                                    backgroundImage: `url("/assets/images/speakersImgs/spk1.png")`,
-                                }}
-                            />
-                        </div>
-                        <h3>le debut </h3>
-                        <h4>lounge</h4>
-                    </div>
-                    <div className='speakerCard'>
-                        <div className='speakerCardImg'>
-                            <div
-                                className='speakerImg'
-                                style={{
-                                    backgroundImage: `url("/assets/images/speakersImgs/spk1.png")`,
-                                }}
-                            />
-                        </div>
-                        <h3>le debut </h3>
-                        <h4>arcade</h4>
+                <div className='eventsCardsContainer'>
+                    <div className='eventCardsWrapper'>
+                        <EventCard
+                            event='techista'
+                            img='techista'
+                            eventDesc='unlocking the technical world piece by piece.'
+                        />
+                        <EventCard
+                            event='designhub'
+                            img='designhub'
+                            eventDesc='designs that provide beyond practicality.'
+                        />
+                        <EventCard
+                            event='foodie'
+                            img='foodie'
+                            eventDesc='from bakes & bites to mouth-watering recipes.'
+                        />
+                        <EventCard
+                            event='lounge'
+                            img='lounge'
+                            eventDesc='meet the inspiring people in the limelight.'
+                        />
+                        <EventCard
+                            event='arcade'
+                            img='arcade'
+                            eventDesc='bring out your inner gamer.'
+                        />
                     </div>
                 </div>
             </div>
 
-            <div className='about1 ' id='sponsers'>
+            <div className='about1 ' id='sponsors'>
                 <div className='title'>
-                    <h1>our stellar sponsers </h1>
-                    <h1>
-                        <span>to be unlocked soon.</span>
-                    </h1>
+					<div className="titleContent">
+						<h1>our stellar sponsors </h1>
+						<h1>
+							<span>to be unlocked soon</span>.
+						</h1>
+					</div>
                 </div>
                 <div className='player'>
                     <img src={stellar} alt='' />
@@ -167,7 +140,9 @@ function Home() {
                             <p>So What are you waiting for?</p>
                             <p>Ready to join us and let&apos;s do cool things that matter?</p>
                             <div className='buttonContainer'>
-                                <button type='button'>Yes</button>
+                                <button type='button' onClick={()=> {
+									landingRef?.current.scrollIntoView({ behavior: 'smooth', block: 'end' })
+								}}>Yes</button>
                                 <button type='button'>No</button>
                             </div>
                         </div>

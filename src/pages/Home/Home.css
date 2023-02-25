@@ -5,6 +5,10 @@
    /* margin-top: -30px;*/
 }
 
+#home a {
+    text-decoration: none;
+}
+
 .main > .landing {
     display: flex;
     text-align: center;
@@ -131,24 +135,47 @@
 
 .about1 {
     height: max(100vh, 500px);
-    margin: -20px 0;
-    padding: 10%;
     display: flex;
-    flex-direction: row;
-    gap: 2;
     justify-content: space-evenly;
     background-color: #42a5f5;
     overflow-x: clip;
-    z-index: 2;
     position: relative;
 }
 
-.about1 > .title > h1 {
+.about1 > .title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about1 > .player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.about1 > .title > .titleContent > h1 {
     font-weight: 700;
-    font-size: max(20px, 6.7vw);
+    font-size: max(20px, 5vw);
     line-height: 111.2%;
     letter-spacing: -0.055em;
     color: #ffffff;
+}
+
+.about1 > .title > .titleContent > h1:nth-of-type(1) {
+    width: 300px;
+    color: white;
+}
+
+.about1 > .title > .titleContent > h1:nth-of-type(2) {
+    width: 500px;
+}
+
+.about1 > .title > .titleContent > h1 > span {
+    color: #1a1a1a;
 }
 
 .legoChars {
@@ -179,10 +206,6 @@
 }
 .about > .title > h1 > span {
     color: #42a5f5;
-}
-
-.about1 > .title > h1 > span {
-    color: #1a1a1a;
 }
 
 .about > .player {
@@ -225,6 +248,21 @@
         margin-top: 80px;
     }
 
+    .about1 > .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about1 > .title > .titleContent > h1:nth-of-type(1) {
+        width: 100%;
+    }
+    
+    .about1 > .title > .titleContent > h1:nth-of-type(2) {
+        width: 100%;
+    }
+
     .legoChars {
         margin: 39px 0 0 0;
         width: 500px;
@@ -234,12 +272,7 @@
         font-size: max(60px, 6.2vw);
        
     }
-    
-    .about1 > .title >h1  {
-        font-size: max(40px, 6vw);
-        margin-left: 10px;
-    }
-    
+
     .player{
         margin-top: 50px;
         margin-bottom: 85px;
@@ -287,7 +320,7 @@
 
 /* SPEAKERS SECTION */
 
-.speaker {
+.speaker, .event {
     height: max(100vh, 100%);
     padding: 10%;
     display: flex;
@@ -300,14 +333,17 @@
 }
 
 .speaker > h1 {
+    display: flex;
+    gap: 0.25em;
+    align-items: center;
     padding-bottom: 10%;
     font-weight: 700;
-    font-size: max(40px, 8vw);
+    font-size: max(30px, 5.5vw);
     line-height: 102px;
     color: #FFFFFF;
 }
 
-.speakerCard{
+.speakerCard, .eventCard {
     align-items: center;
 }
 
@@ -336,6 +372,39 @@
         scroll-snap-align: start;
         width: 289px;
     }
+}
+
+/* EVENTS SECTION */
+
+
+.event > h1 {
+    display: flex;
+    gap: 0.25em;
+    align-items: center;
+    padding-bottom: 10%;
+    font-weight: 700;
+    font-size: max(30px, 5.5vw);
+    line-height: 102px;
+    color: #FFFFFF;
+}
+
+.eventsCardsContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eventCardsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    overflow-x: auto;
 }
 
 /* REVIEWS SECTION */

@@ -1,0 +1,67 @@
+.eventCard > .eventCardImg {
+    height: 250px;
+    width: 250px;
+    background-color: #42a5f5;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.eventCard > .eventCardImg > .eventImg {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    height: 220px;
+    width: 220px;
+    filter: saturate(0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    transition: opacity 0.5s ease-out;
+}
+
+.eventCard:hover > .eventCardImg > .eventImg {
+    opacity: 0;
+}
+
+.eventCard > .eventCardImg > .desc {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.eventCard:hover > .eventCardImg > .desc {
+    opacity: 100;
+}
+
+.eventCard > .eventCardImg > .desc > p {
+    width: 70%;
+    font-weight: 500;
+    font-size: max(20px, 2vw);
+}
+
+.eventCard  {
+    color: white;
+}
+
+.eventCard > h3 {
+    font-weight: 200;
+    font-size: max(20px, 2vw);
+    padding-top: 20px;
+}
+
+.eventCard > h4 {
+    font-size: max(30px, 3vw);
+    padding-bottom: 20px;
+}
