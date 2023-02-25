@@ -1,15 +1,12 @@
 .speakerCard > .speakerCardImg {
     position: relative;
-    background-color: #42a5f5 ;
-    border-radius: 15px;
-    height: 250px;
-    width: 250px;
+    background-image: url("../../../../assets/images/speakerBg.png");
+    height: 300px;
+    width: 300px;
 }
 
 .speakerCard > .speakerCardImg > .speakerImg {
     position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
     height: 230px;
     width: 220px;
     filter: saturate(0);
@@ -19,8 +16,7 @@
     
     text-align: center;
     color: white;
-    margin: 20px;
-
+   
 }
 
 .speakerCard > h3 {

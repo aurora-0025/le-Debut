@@ -14,8 +14,24 @@ async function MyApi(req, res) {
         return res.status(200).end()
     }
     if (req.method === 'POST') {
-        const { name, email, phoneNumber, department, classno, moreInfo } = req.body
+        const { name, email, phoneNumber, department, classno, moreInfo, plan, selectedPayment, paymentScreenshotSrc } = req.body
         try {
+                const { results } = await notion.databases.query({
+                  database_id: databaseId,
+                  filter: {
+                    property: 'Email',
+                    title: {
+                      equals: email,
+                    },
+                  },
+                });
+            
+            if (results.length !== 0) {
+                return res.status(501).json({error:'User already exists'});
+            };
+
+            console.log(paymentScreenshotSrc);
+
             const response = await notion.pages
                 .create({
                     parent: { database_id: databaseId },
@@ -80,6 +96,42 @@ async function MyApi(req, res) {
                                 },
                             ],
                         },
+
+                        'Selected Ticket': {
+                            rich_text: [
+                                {
+                                    type: 'text',
+                                    text: {
+                                        content: plan
+                                    }
+                                }
+                            ]
+                        },
+                        'Payment method': {
+                            rich_text: [
+                                {
+                                    type: 'text',
+                                    text: {
+                                        content: selectedPayment
+                                    }
+                                }
+                            ]
+                        },
+                        ...(paymentScreenshotSrc) && {
+                            'Screenshot': {
+                                rich_text: [
+                                    {
+                                        type: 'text',
+                                        text: {
+                                            content: name,
+                                            link: {
+                                                url: paymentScreenshotSrc
+                                            }
+                                        }
+                                    }
+                                ],
+                            }
+                        }
                     },
                 })
                 .then(() => res.json({ success: 'created db entry' }))

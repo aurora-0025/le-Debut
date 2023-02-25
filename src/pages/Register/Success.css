@@ -1,0 +1,33 @@
+.successPage {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #1a1a1a;
+}
+
+.successPage >  h1 {
+    color: white;
+    font-size: min(10vw, 65px);
+}
+
+.successPage > .ledebut {
+    color: #42a5f5;
+    margin-bottom: 30px;
+}
+
+.successPage > h4 {
+    color: white;
+    font-size:  min(5vw, 22px);
+}
+
+.successPage > a {
+    text-decoration: none;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.successPage > a:hover {
+    background-color: white;
+}

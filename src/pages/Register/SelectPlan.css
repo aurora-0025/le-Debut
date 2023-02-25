@@ -1,0 +1,32 @@
+.selectPlan {
+    background-color: #1a1a1a !important;
+    padding-top: 40px;
+}
+
+.selectPlan > h4 {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.planCardsContainer, .selectPlan {
+    display: grid;
+    place-items: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.planHeader {
+    width: clamp(300px, 30vw, 500px);
+    margin-bottom: 30px;
+}
+
+.planCardsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    overflow-x: auto;
+}
