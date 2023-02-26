@@ -218,7 +218,7 @@
 .legoChars {
     position: absolute;
     z-index: -99;
-    left: 53%;
+    left: 50%;
     transform: translate(-50%);
     height: 340px;
     width: 600px;
