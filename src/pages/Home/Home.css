@@ -235,7 +235,29 @@
 }
 
 .about > .player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
+    height: 300px;
+    -moz-border-radius: 10px;
+    position: relative;
+}
+
+.about > .player > #wrap {
+    width: 460px;
+    height: 300px;
+    border-radius: 20px;
+    -moz-border-radius: 10px;
+    background: #42a5f5;
+    position: relative;
+}
+
+.about > .player > #wrap > iframe {
+    position: absolute;
+    border: #42a5f5;
+    top: 10px;
+    left: 10px;
 }
 
 @media screen and (min-width: 900px) {
@@ -265,7 +287,7 @@
     .about {
         text-align: center;
     }
-    
+
     .about1 {
         flex-direction: column;
         justify-content: center;
@@ -299,12 +321,12 @@
        
     }
 
-    .player{
+    .about1 > .player{
         margin-top: 50px;
         margin-bottom: 85px;
     }
 
-    .player > img{
+    .about1 > .player > img{
         height:250px;
     }
 

@@ -75,7 +75,9 @@ function Home() {
                     </h1>
                 </div>
                 <div className='player' >
-                    <iframe title="promo" src="https://drive.google.com/file/d/1f8jPcM92jHkDUjmy0Ta0GpkikBcFKki3/preview" width="540" height="280" allow="autoplay" />
+                    <div id="wrap">
+                        <iframe title="promo" src="https://drive.google.com/file/d/1f8jPcM92jHkDUjmy0Ta0GpkikBcFKki3/preview" width="440" height="280" allow="autoplay" />
+                    </div>
                 </div>
             </div>
 
