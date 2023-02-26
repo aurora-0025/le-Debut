@@ -237,7 +237,7 @@
 
 .about > .title > h1 {
     font-weight: 700;
-    font-size: max(10px, 6.5vw);
+    font-size: max(30px, 5vw);
     line-height: 111.2%;
     letter-spacing: -0.055em;
     color: #ffffff;
