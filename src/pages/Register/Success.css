@@ -1,5 +1,5 @@
 .successPage {
-    min-height: 70vh;
+    min-height: max(100vh, 600px);
     display: flex;
     flex-direction: column;
     justify-content: center;
