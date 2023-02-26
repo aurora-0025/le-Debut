@@ -28,8 +28,8 @@ function Badge() {
     const canvasRef = useRef(null)
 
     const removeBG = async (imageData) => {
-        const apiURL = 'https://remove-bg-api.fly.dev'
-        // if (import.meta.env.DEV) apiURL = 'http://localhost:8080'
+        let apiURL = 'https://remove-bg-api.fly.dev'
+        if (import.meta.env.DEV) apiURL = 'http://localhost:8080'
         fetch(`${apiURL}/removeBG`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
