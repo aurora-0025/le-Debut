@@ -3,6 +3,7 @@ import charsImage from '../../assets/images/headerLegoCharacters.png'
 import lego3brick from '../../assets/images/lego3brick.png'
 import eye from '../../assets/images/eye.png'
 import stellar from '../../assets/images/stellar.png'
+import rectangle from '../../assets/images/rectangle.png'
 import './Home.css'
 import speakersData from './Components/Speakers/speakersData'
 import reviewsData from './Components/Reviews/reviewData'
@@ -78,6 +79,7 @@ function Home() {
             </div>
 
             <div className='about1' ref={speakersRef}>
+                
                 <div className='title'>
 				<div className="titleContent">
                     <h1>our stellar speakers </h1>
@@ -86,11 +88,16 @@ function Home() {
                     </h1>
 					</div>
                 </div>
+                <div className='image'>
                 <div className='player'>
                     <img src={stellar} alt='' />
                 </div>
+                <div className='playerin'>
+                    <img src={rectangle} alt='' />
+                </div>
+                </div>
             </div>
-
+          
             <div className='event'>
                 <h1>
                     keep an{' '}
@@ -137,8 +144,13 @@ function Home() {
 						</h1>
 					</div>
                 </div>
+                <div className='image'>
                 <div className='player'>
                     <img src={stellar} alt='' />
+                </div>
+                <div className='playerin'>
+                    <img src={rectangle} alt='' />
+                </div>
                 </div>
             </div>
 
