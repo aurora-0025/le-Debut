@@ -39,7 +39,7 @@ function NavBar() {
         if(location.pathname !== '/') {
             navigate('/');
         }
-        else if (link === 'sponsor') {
+        if (link === 'sponsor') {
             store.sponsorsRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
         else {

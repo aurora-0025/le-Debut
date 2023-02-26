@@ -25,10 +25,6 @@ function Home() {
     const { store, actions } = useContext(AppContext)
 
     useEffect(() => {
-        if(speakersRef) actions.setSpeakersRef(speakersRef);
-        if(sponsorsRef) actions.setSponsorsRef(sponsorsRef);
-        actions.setSponsorsRef(sponsorsRef);
-        
         window.addEventListener('load', () => {
             actions?.setBackgroundColor('#42a5f5')
             setLoading(false)
@@ -40,6 +36,7 @@ function Home() {
     }, [])
 
     useEffect(() => {
+        if(!speakersRef) return;
         actions.setSpeakersRef(speakersRef)
     }, [speakersRef])
 
@@ -81,7 +78,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className='about1' ref={speakersRef}>
+            <div className='about1' id="speakers" ref={speakersRef}>
                 <div className='title'>
 				<div className="titleContent">
                     <h1>our stellar speakers </h1>
