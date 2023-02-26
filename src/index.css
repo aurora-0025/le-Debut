@@ -46,6 +46,10 @@ body > #root > div {
   outline:none;
 }
 
+b {
+  font-weight: 700;
+}
+
 /* https://github.com/werbhq/definewebsite/blob/master/src/pages/define.css */
 
 @media (hover: hover) {

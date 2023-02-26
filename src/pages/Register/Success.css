@@ -1,5 +1,5 @@
 .successPage {
-    min-height: max(100vh, 600px);
+    min-height: max(100vh, 500px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,27 +8,44 @@
     background-color: #1a1a1a;
 }
 
-.successPage >  h1 {
+.successPage > .successContainer {
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.successPage > .successContainer >  h1 {
     color: white;
     font-weight: 700;
     font-size: min(15vw, 75px);
 }
 
-.successPage > .ledebut {
+
+
+.successPage > .successContainer > .ledebut {
     color: #42a5f5;
     margin-bottom: 30px;
 }
 
-.successPage > h4 {
+.successPage > .successContainer > h4 {
     color: white;
     font-size:  min(5vw, 22px);
 }
+.whatsapp {
+    margin-bottom: 10px;
+}
+.whatsapp a {
+    color: #42a5f5;
+}
 
-.successPage > a {
+.successPage > .successContainer > a {
+    color: #1a1a1a;
     text-decoration: none;
     transition: background-color 0.5s ease-in-out;
 }
 
-.successPage > a:hover {
+.successPage > .successContainer > a:hover {
     background-color: white;
 }

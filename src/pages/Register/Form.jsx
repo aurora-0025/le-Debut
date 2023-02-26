@@ -81,6 +81,7 @@ function Form() {
         if (phoneNumber === '') setPhoneError('Please provide us with your contact number')
         if (isFirstYear === 'no') setIsFirstYearError('This event is exclusively for first years')
         if (name === '' || email === '' || phoneNumber === '' || isFirstYear === 'no') {
+            window.scrollTo(0, 0);
             setSubmitText("Let's Go")
             return
         }
@@ -134,6 +135,7 @@ function Form() {
                 setSubmitText("Let's Go")
                 if (response.status === 501) {
                     setPage(1)
+                    window.scrollTo(0, 0);
                     setEmailError('You are already registered')
                 }
                 return response.json()
@@ -144,6 +146,7 @@ function Form() {
                     actions?.setBackgroundColor('#1a1a1a');
                     actions?.setFooterColor('#42a5f5');
                     setShowSuccessPage(true);
+                    window.scrollTo(0, 0);
                 }
             })
             .catch((error) => {

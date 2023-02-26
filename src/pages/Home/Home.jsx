@@ -79,7 +79,8 @@ function Home() {
                 </div>
                 <div className='player' >
                     <div id="wrap">
-                        <iframe title="promo" src="https://drive.google.com/file/d/1f8jPcM92jHkDUjmy0Ta0GpkikBcFKki3/preview" width="440" height="280" allow="autoplay" />
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wCmt2Oa9Olk" title="promo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullscreen/>
+                        {/* <iframe title="promo" src="https://drive.google.com/file/d/1f8jPcM92jHkDUjmy0Ta0GpkikBcFKki3/preview" width="440" height="280" allow="autoplay" /> */}
                     </div>
                 </div>
             </div>
@@ -173,7 +174,7 @@ function Home() {
                     <div className='chatBubble'>
                         <div className='content'>
                             <p>So What are you waiting for?</p>
-                            <p>Ready to join us and let&apos;s do cool things that matter?</p>
+                            <p>Join us and <b>let&apos;s do cool things that matter.</b></p>
                             <div className='buttonContainer'>
                                 <button type='button' onClick={()=> {
 									landingRef?.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -182,8 +183,7 @@ function Home() {
                                         setButtonHighlight(false)
                                     }, 2000);
 
-								}}>Yes</button>
-                                <button type='button'>No</button>
+								}}>Count me in</button>
                             </div>
                         </div>
                     </div>
