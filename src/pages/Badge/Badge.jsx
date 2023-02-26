@@ -28,8 +28,9 @@ function Badge() {
     const canvasRef = useRef(null)
 
     const removeBG = async (imageData) => {
+        // eslint-disable-next-line prefer-const
         let apiURL = 'https://remove-bg-api.fly.dev'
-        if (import.meta.env.DEV) apiURL = 'http://localhost:8080'
+        // if (import.meta.env.DEV) apiURL = 'http://localhost:8080'
         fetch(`${apiURL}/removeBG`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -37,6 +38,10 @@ function Badge() {
         })
             .then((response) => response.json())
             .then((data) => {
+                if (data.error) {
+                    setUploadError('There was a problem generating badge please try again later')
+                    setLoading(false)
+                }
                 setRemovedBGImage(data.data.imageSrc)
                 setLoading(false)
                 console.log('success received removed BG')

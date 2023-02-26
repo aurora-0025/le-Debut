@@ -20,9 +20,17 @@ function NavBar() {
             setActiveLink('home')
             actions.setFooterColor('#42a5f5')
         }
-        else {
+        else if (location.pathname === '/register') {
             setActiveLink('register')
             actions.setFooterColor('#1a1a1a')
+        }
+        else if (location.pathname === '/badge') {
+            setActiveLink('register')
+            actions.setFooterColor('#42a5f5')
+        }
+        else {
+            setActiveLink('home')
+            actions.setFooterColor('#42a5f5')
         }
     }, [location])
     
