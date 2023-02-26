@@ -408,7 +408,7 @@ background: #FFFFFF;
 
 /* SPEAKERS SECTION */
 
-.speaker, .event {
+.speaker {
     height: max(100vh, 100%);
     padding: 10%;
     display: flex;
@@ -464,6 +464,17 @@ background: #FFFFFF;
 
 /* EVENTS SECTION */
 
+.event {
+    height: max(100vh, 100%);
+    padding: 7%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    overflow-x: clip;
+    z-index: 2;
+    position: relative;
+}
 
 .event > h1 {
     display: flex;
@@ -487,11 +498,11 @@ background: #FFFFFF;
 .eventCardsWrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 150px;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
-    max-width: 900px;
+    max-width: 100%;
     overflow-x: auto;
 }
 
@@ -540,7 +551,9 @@ background: #FFFFFF;
 }
 
 @media screen and (max-width: 900px) {
-
+    .eventCardsWrapper {
+        gap: 10px;
+    }
     .reviews > h1{
         padding: 40px  0;
         font-weight: 500;
