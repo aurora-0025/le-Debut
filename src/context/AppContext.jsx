@@ -38,7 +38,6 @@ export function ContextWrapper({ children }) {
             setStore((prevStore) => ({
                 ...prevStore,
                 backgroundColor: color,
-                footerColor: `${color === '#42a5f5' ? '#1a1a1a' : '#42a5f5'}`,
             }))
         },
         setFooterColor: (color) =>

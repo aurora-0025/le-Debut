@@ -191,6 +191,7 @@ function Form() {
             setPage(1);
             window.scrollTo(0, 0);
 		    actions?.setBackgroundColor('#42a5f5');
+            actions.setFooterColor('#1a1a1a')
         }
     }, [plan])
 
