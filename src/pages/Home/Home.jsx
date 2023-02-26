@@ -131,7 +131,7 @@ function Home() {
             <div className='about1 ' id='sponsors' ref={sponsorsRef}>
                 <div className='title'>
 					<div className="titleContent">
-						<h1>our stellar sponsors </h1>
+						<h1>our sponsors </h1>
 						<h1>
 							<span>to be unlocked soon</span>.
 						</h1>
