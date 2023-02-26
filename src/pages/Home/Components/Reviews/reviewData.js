@@ -1,6 +1,6 @@
 const reviews = [
     {
-        name: 'Swetha .S',
+        name: 'Swetha S',
         review: 'THIS WAS LEGIT,i was happy,hyped up and i got a push of exposure cuz all i knew were just people from my class and their mutuals but NOW I KNOW A LOT MORE people and I didnt give design much of a thought but since yesterday IVE BEEN FEELING good and confident about pursuing design in civil engineering AND IM TOTALLY JOINING THIS CLUB'
     },
     {
