@@ -141,7 +141,7 @@ function Form() {
             .then((data) => {
                 console.log(data)
                 if (data.success) {
-                    actions?.setBackgroundColor('#42a5f5');
+                    actions?.setBackgroundColor('#1a1a1a');
                     actions?.setFooterColor('#42a5f5');
                     setShowSuccessPage(true);
                 }
