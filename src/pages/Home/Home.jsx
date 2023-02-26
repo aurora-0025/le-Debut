@@ -4,6 +4,11 @@ import lego3brick from '../../assets/images/lego3brick.png'
 import eye from '../../assets/images/eye.png'
 import stellar from '../../assets/images/stellar.png'
 import rectangle from '../../assets/images/Rectangle.png'
+import eyeoutlights from '../../assets/images/keepeyeoutlights.png'
+import reviewTopLight from '../../assets/images/reviewTopLight.png'
+import topLeftLight from '../../assets/images/lighttopleft.png'
+import reviewBottomLight from '../../assets/images/reviewBottomLight.png'
+
 import './Home.css'
 import speakersData from './Components/Speakers/speakersData'
 import reviewsData from './Components/Reviews/reviewData'
@@ -80,6 +85,7 @@ function Home() {
             </div>
 
             <div className='about1' id="speakers" ref={speakersRef}>
+                <img alt='' src={topLeftLight} className='lights' />
                 <div className='title'>
 				<div className="titleContent">
                     <h1>our stellar speakers </h1>
@@ -99,6 +105,7 @@ function Home() {
             </div>
           
             <div className='event'>
+                <img alt='' src={eyeoutlights} className='lights' />
                 <h1>
                     keep an{' '}
                     <img id='eyesImg' src={eye} style={{ width: '60px', height: '70px' }} alt='' />{' '}
@@ -155,6 +162,9 @@ function Home() {
             </div>
 
             <div className='reviews'>
+            <img alt='' src={reviewTopLight} className='toplight' />
+            <img alt='' src={reviewBottomLight} className='bottomlight' />
+
                 <h1>our past reviews</h1>
                 <div className='reviewWrapper'>
                     {reviewsData.map((s) => (

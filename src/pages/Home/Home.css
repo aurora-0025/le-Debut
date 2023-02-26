@@ -158,12 +158,24 @@
 }
 
 .about1 {
-    height: max(100vh, 500px);
+    height: max(100vh, 700px);
     display: flex;
     justify-content: space-evenly;
     background-color: #42a5f5;
     overflow-x: clip;
     position: relative;
+    padding-right: 50px;
+}
+
+.about1 * {
+    z-index: 2;
+}
+
+.about1 > .lights {
+    position: absolute;
+    top: -110px;
+    left: 0;
+    z-index: 1;
 }
 
 .about1 > .title {
@@ -249,8 +261,8 @@
 }
 
 .about > .player > #wrap {
-    width: 460px;
-    height: 300px;
+    width: 500px;
+    height: 380px;
     border-radius: 20px;
     -moz-border-radius: 10px;
     background: #42a5f5;
@@ -262,6 +274,8 @@
     border: #42a5f5;
     top: 10px;
     left: 10px;
+    width: 480px;
+    height: 360px;
 }
 
 @media screen and (min-width: 900px) {
@@ -338,6 +352,20 @@ background: #FFFFFF;
 
     .about1 > .title > .titleContent > h1:nth-of-type(1) {
         width: 100%;
+    }
+
+    .about > .title > h1:nth-child(2) {
+        width: 100%;
+    }
+
+    .about > .player > #wrap {
+        width: 400px;
+        height: 300px;
+    }
+
+    .about > .player > #wrap > iframe {
+        width: 380px;
+        height: 280px;
     }
     
     .about1 > .title > .titleContent > h1:nth-of-type(2) {
@@ -479,6 +507,17 @@ background: #FFFFFF;
     position: relative;
 }
 
+.event * {
+    z-index: 2;
+}
+
+.event > .lights {
+    position: absolute;
+    top: -265px;
+    left: 0;
+    z-index: 1;
+}
+
 .event > h1 {
     display: flex;
     gap: 0.25em;
@@ -520,6 +559,24 @@ background: #FFFFFF;
     overflow-x: clip;
     z-index: 2;
     position: relative;
+}
+
+.reviews * {
+    z-index: 2;
+}
+
+.reviews > .toplight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.reviews > .bottomlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .reviews > h1 {
