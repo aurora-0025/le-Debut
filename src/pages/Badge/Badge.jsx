@@ -4,6 +4,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ReactCrop from 'react-image-crop'
 import badgeBg from '../../assets/images/BadgeBg.png'
+import emptyBadge from '../../assets/images/emptyBadge.png'
 import badgeOverlay from '../../assets/images/BadgeOverlay.png'
 import 'react-image-crop/dist/ReactCrop.css'
 import './Badge.css'
@@ -248,6 +249,7 @@ function Badge() {
                     {uploadError&& <p className='uploadError'>{uploadError}</p>}
                 </div>
                 <div className='generator'>
+                    {!removedBGImage && <img src={emptyBadge} width={320} height={320} alt="" />}
                     <canvas
                         width={320}
                         height={320}
