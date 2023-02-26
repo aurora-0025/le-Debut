@@ -11,8 +11,9 @@
     position: absolute;
     display: grid;
     place-items: center;
-    height: 220px;
-    width: 220px;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9);
     filter: saturate(0);
     background-size: cover;
     background-repeat: no-repeat;
