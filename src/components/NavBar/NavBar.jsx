@@ -38,6 +38,7 @@ function NavBar() {
     const executeScroll = (link) => {
         if(location.pathname !== '/') {
             navigate('/');
+            actions.setBackgroundColor('#42a5f5')
         }
         if (link === 'sponsor') {
             store.sponsorsRef?.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
