@@ -501,7 +501,7 @@ function Form() {
                                 <h1>Payment | Bank Transfer</h1>
                                 <h3>Ticket Rates</h3>
                                 <h4>
-                                    2-day pass excl. food pass : <span> Rs. 100</span>
+                                    2-day pass excl. food pass : <span> Rs. 150</span>
                                 </h4>
                                 <h4>
                                     2-day pass incl. food pass (non-veg) : <span> Rs. 300</span>
@@ -543,7 +543,7 @@ function Form() {
                                 <h3>
                                     Upload Screenshot<span>*</span>
                                 </h3>
-                                <h4>screenshot of payment with transaction ID.</h4>
+                                <h4>Screenshot of payment with transaction ID.</h4>
 
                                 <label className='uploadButton'>
                                     <input
@@ -583,7 +583,7 @@ function Form() {
                                 <h1>Payment | Gpay / UPI</h1>
                                 <h3>Ticket Rates</h3>
                                 <h4>
-                                    2-day pass excl. food pass : <span> Rs. 100</span>
+                                    2-day pass excl. food pass : <span> Rs. 150</span>
                                 </h4>
                                 <h4>
                                     2-day pass incl. food pass (non-veg) : <span> Rs. 300</span>
@@ -630,7 +630,7 @@ function Form() {
                                 <h3>
                                     Upload Screenshot<span>*</span>
                                 </h3>
-                                <h4>screenshot of payment with transaction ID.</h4>
+                                <h4>Screenshot of payment with transaction ID.</h4>
 
                                 <label className='uploadButton'>
                                     <input
