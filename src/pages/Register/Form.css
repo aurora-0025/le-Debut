@@ -7,101 +7,117 @@
     box-shadow: 0px 0px 67px rgba(0, 0, 0, 0.49);
     border-radius: 100%;
     z-index: 1;
-  }
-  
-  .form-wrapper:before {
+}
+
+.form-wrapper:before {
     z-index: -1;
-    content: "";
+    content: '';
     position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
-  }
-  
-  .lego-character-proximity {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.lego-character-proximity {
     position: absolute;
     background-color: transparent;
     height: 120px;
     width: 100px;
     top: -90px;
     right: 20px;
-  }
-  
-  .wobble{
+}
+
+.wobble {
     animation: shake 1s infinite;
-  }
-  @keyframes shake {
-    0%  { transform: translateY(-15px)   rotate(0deg);  }
-    25%  { transform:  translateY(-15px) rotate(-10deg);  }
-    50%  { transform:  translateY(-15px) rotate(0deg);  }
-    75%  { transform: translateY(-15px) rotate(10deg);  }
-    100%  { transform: translateY(-15px)  rotate(0deg);  }
-  }
-  
-  .lego-character {
+}
+@keyframes shake {
+    0% {
+        transform: translateY(-15px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+    100% {
+        transform: translateY(-15px) rotate(0deg);
+    }
+}
+
+.lego-character {
     position: absolute;
     transition: transform 0.25s ease-in-out;
     top: -70px;
     right: 20px;
     z-index: -2;
-  }
-  
-  .lego-character-proximity:hover ~.lego-character {
+}
+
+.lego-character-proximity:hover ~ .lego-character {
     transform: translateY(30px);
-  }
-  .form-wrapper:hover > .lego-character {
+}
+.form-wrapper:hover > .lego-character {
     transform: translateY(-30px);
-  }
-  
-  #eyes, #eyes img {
+}
+
+#eyes,
+#eyes img {
     position: absolute;
     width: 7px;
-  }
-  
-  .form {
+}
+
+.form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 15%;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 0px 67px rgba(0, 0, 0, 0.49);
     border-radius: 50px 40px 40px 40px;
-  }
-  
-  .form > h1 {
-    font-size: clamp(16px, 7.5vw,45px);
+}
+
+.form > h1 {
+    font-size: clamp(16px, 7.5vw, 45px);
     line-height: max(30px);
     font-weight: 700;
-    color: #2196F3;
-  }
+    color: #2196f3;
+}
 
-  .form > h3 {
-    font-size: clamp(20px, 7.5vw,40px);
+.form > h3 {
+    font-size: clamp(20px, 7.5vw, 40px);
     line-height: max(70px);
     font-weight: 700;
     color: rgba(0, 0, 0, 0.35);
-  }
+}
 
-  .form > h4 {
+.form > h4 {
     margin-top: 30px;
-    font-size: clamp(20px, 2vw,37px);
+    font-size: clamp(20px, 2vw, 37px);
     font-weight: 700;
     letter-spacing: -0.05em;
     color: rgb(0, 0, 0);
-  }
-  
-  .inputfield > label, .inputfield > input, .inputfield > p {
+}
+
+.inputfield > label,
+.inputfield > input,
+.inputfield > p {
     margin: 0;
-  }
-  .inputfield {
+}
+.inputfield {
     margin-top: 20px;
-  }
-  .inputfield > label {
+}
+.inputfield > label {
     display: block;
-    font-size: clamp(14px, 1.9vw,20px);
+    font-size: clamp(14px, 1.9vw, 20px);
     font-weight: 700;
     letter-spacing: -0.05em;
-  }
-  .inputfield > input, .inputfield > textarea {
+}
+.inputfield > input,
+.inputfield > textarea {
     margin-top: 5px;
     min-height: 50px;
     border: none;
@@ -109,100 +125,100 @@
     width: 100%;
     padding: 5px 0;
     padding-left: 10px;
-    background: #FBFBFB;
-    border: 1px solid #ADADAD;
+    background: #fbfbfb;
+    border: 1px solid #adadad;
     border-radius: 9px;
     font-size: clamp(15px, 3vw, 18px);
     font-weight: 700;
-  } 
-  
-  .inputfield > textarea {
+}
+
+.inputfield > textarea {
     min-height: 100px;
     resize: none;
-    background: #FBFBFB;
-    border: 1px solid #ADADAD;
-  }
-  .inputfield > label > span {
-    color: #FF002A;
-  }
-  .inputfield > p {
+    background: #fbfbfb;
+    border: 1px solid #adadad;
+}
+.inputfield > label > span {
+    color: #ff002a;
+}
+.inputfield > p {
     font-weight: 400;
     font-size: 14px;
-    color: #FF002A;
-  }
+    color: #ff002a;
+}
 
-  .radioButtonField {
+.radioButtonField {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
 
-  .radioButtonField > input {
+.radioButtonField > input {
     margin-top: 0px;
     min-height: 20px;
     width: 20px;
     padding: 0px;
-  }
-  
-  select {
+}
+
+select {
     appearance: none;
     border: none;
-    padding:10px;
-    background: #FBFBFB;
+    padding: 10px;
+    background: #fbfbfb;
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     cursor: inherit;
     line-height: inherit;
-  }
-  
-  select::-ms-expand {
+}
+
+select::-ms-expand {
     display: none;
-  }
-  
-  select,
-  .dropdown:after {
+}
+
+select,
+.dropdown:after {
     grid-area: select;
-  }
-  .dropdown option {
+}
+.dropdown option {
     padding: 5px;
-  }
-  
-  select:focus > option:checked { 
-    background: #ADADAD !important;
-  }
-  .dropdown {
+}
+
+select:focus > option:checked {
+    background: #adadad !important;
+}
+.dropdown {
     margin-top: 5px;
-    background: #FBFBFB;
-    border: 1px solid #ADADAD;
+    background: #fbfbfb;
+    border: 1px solid #adadad;
     border-radius: 0.25em;
     padding: 5px 5px;
     font-size: 1.25rem;
     cursor: pointer;
     line-height: 1.1;
     display: grid;
-    grid-template-areas: "select";
+    grid-template-areas: 'select';
     align-items: center;
     position: relative;
-  }
-  
-  .dropdown::after {
-    content: "";
+}
+
+.dropdown::after {
+    content: '';
     width: 0.8em;
     height: 0.5em;
-    background: #ADADAD;
+    background: #adadad;
     clip-path: polygon(100% 0%, 0 0%, 50% 100%);
     justify-self: end;
-  }
+}
 
-  .vradioContainer {
+.vradioContainer {
     margin-top: 20px;
     display: flex;
     gap: 10px;
     flex-direction: column;
-  }
+}
 
-  input[type="radio"] {
+input[type='radio'] {
     appearance: none;
     background-color: #fff;
     margin: 0;
@@ -215,31 +231,30 @@
     cursor: pointer;
     border-radius: 50%;
     transition: background-color 0.25s ease-in;
-  }
+}
 
-  input[type="radio"]:checked {
+input[type='radio']:checked {
     background-color: var(--lego-yellow);
-  }
+}
 
-  .option {
+.option {
     display: flex;
     gap: 10px;
     align-items: center;
-  }
+}
 
-  .option > label {
+.option > label {
     font-size: clamp(12px, 2vw, 18px);
     font-weight: 700;
-  }
+}
 
-  .hradioContainer {
+.hradioContainer {
     margin-top: 20px;
     display: flex;
     gap: 20px;
-  }
+}
 
-
-  /* input[type="radio"]::before {
+/* input[type="radio"]::before {
     content: "";
     border-radius: 50%;
     transform: scale(0);
@@ -290,77 +305,77 @@
     width: 200px;
   }
    */
-  .payment > h1 {
+.payment > h1 {
     margin-bottom: 30px;
-    font-size: clamp(16px, 7.5vw,45px);
-  }
-  .payment h3 {
-    font-size: clamp(20px, 2vw,37px);
+    font-size: clamp(16px, 7.5vw, 45px);
+}
+.payment h3 {
+    font-size: clamp(20px, 2vw, 37px);
     font-weight: 700;
     letter-spacing: -0.05em;
     color: rgb(0, 0, 0);
     margin-top: 10px;
-  }
+}
 
-  .payment h3 > span {
-    color: #FF002A;
-  }
+.payment h3 > span {
+    color: #ff002a;
+}
 
-  .payment h4 {
+.payment h4 {
     margin: 0;
-    font-size: clamp(8px, 3.5vw,22px);
+    font-size: clamp(8px, 3.5vw, 22px);
     font-weight: 700;
     color: black;
-  }
+}
 
-  .payment h4 > span {
+.payment h4 > span {
     font-weight: 400;
-  }
+}
 
-  .paymentDetails {
+.paymentDetails {
     margin: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
+}
 
-  .payment > .nextPrevButtonsContainer {
+.payment > .nextPrevButtonsContainer {
     display: flex;
     width: 100%;
     gap: 30px;
-  }
+}
 
-  .payment > .nextPrevButtonsContainer > button {
+.payment > .nextPrevButtonsContainer > button {
     width: 100%;
-  }
+}
 
-  .payment > .qrcodeContainer {
+.payment > .qrcodeContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .payment > .qrcodeContainer > h3 {
-    font-size: clamp(20px, 6.5vw,25px);
+.payment > .qrcodeContainer > h3 {
+    font-size: clamp(20px, 6.5vw, 25px);
     font-weight: 700;
-  }
+}
 
-  .payment > .qrcodeContainer > img {
+.payment > .qrcodeContainer > img {
     width: 200px;
-  }
+}
 
-  .legoman-wrapper {
+.legoman-wrapper {
     margin-top: 25px;
     flex: 1;
     max-height: 100%;
-  }
-  .legoman {
+}
+.legoman {
     max-height: 315px;
     margin: 0;
     padding: 0;
-  }
-  
-  .submit {
+}
+
+.submit {
     cursor: pointer;
     border: none;
     margin-top: 50px;
@@ -371,56 +386,66 @@
     background-color: var(--lego-yellow);
     border-radius: 10px;
     transition: transform 0.5s;
-  }
-  
-  .submit:hover {
+}
+
+.submit:hover {
     transform: scale(102%);
-  }
-  
-  .submit > p {
+}
+
+.submit > p {
     font-size: 24px;
     padding: 10px;
     margin: 0;
     font-weight: 600;
     letter-spacing: -0.05em;
-  }
+}
 
-  ::-webkit-input-placeholder { /* Edge */
+::-webkit-input-placeholder {
+    /* Edge */
     font-weight: 700;
-    font-size: clamp(14px, 1.5vw,30px);
+    font-size: clamp(14px, 1.5vw, 30px);
     line-height: 36px;
     /* identical to box height */
-    
-    letter-spacing: -0.05em;
-    
-    color: rgba(0, 0, 0, 0.24);
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    font-weight: 700;
-   font-size: clamp(14px, 1.5vw,30px);
-    line-height: 36px;
-    /* identical to box height */
-    
-    letter-spacing: -0.05em;
-    
-    color: rgba(0, 0, 0, 0.24);
-  }
-  
-  ::placeholder {
-    font-weight: 700;
-    font-size: clamp(14px, 1.5vw,30px);
-    line-height: 36px;
-    /* identical to box height */
-    
-    letter-spacing: -0.05em;
-    
-    color: rgba(0, 0, 0, 0.24);
-  }
 
-  @media (max-width: 660px) {
+    letter-spacing: -0.05em;
+
+    color: rgba(0, 0, 0, 0.24);
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-weight: 700;
+    font-size: clamp(14px, 1.5vw, 30px);
+    line-height: 36px;
+    /* identical to box height */
+
+    letter-spacing: -0.05em;
+
+    color: rgba(0, 0, 0, 0.24);
+}
+
+::placeholder {
+    font-weight: 700;
+    font-size: clamp(14px, 1.5vw, 30px);
+    line-height: 36px;
+    /* identical to box height */
+
+    letter-spacing: -0.05em;
+
+    color: rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 660px) {
     .form-wrapper {
-      width: 100%;
-      margin: 100px 0 50px 0;
+        width: 100%;
+        margin: 100px 0 50px 0;
+        box-shadow: none;
+        /* box-shadow: 0px 0px 67px rgba(0, 0, 0, 0.49); */
+        border-radius: 0;
     }
-  }
+
+    .form {
+        box-shadow: none;
+        border-radius: 20px;
+    }
+}

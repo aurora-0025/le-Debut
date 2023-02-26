@@ -172,6 +172,7 @@
 }
 
 .about1 > .lights {
+    display: block;
     position: absolute;
     top: -110px;
     left: 0;
@@ -344,6 +345,11 @@ background: #FFFFFF;
         height:80vh;
         margin-top: 80px;
     }
+
+    .about1 > .lights {
+        display: none;
+    }
+    
 
     .about1 > .title {
         display: flex;
