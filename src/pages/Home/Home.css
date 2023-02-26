@@ -301,15 +301,7 @@
         left:140px
     }
 
- /*   .playerin{
-        position: absolute;
-width: 23px;
-height: 29px;
-left: 930px;
-top: 400px;
-
-background: #FFFFFF;
-    }*/
+ 
 }
 
 @media screen and (max-width: 900px) {
@@ -464,7 +456,6 @@ background: #FFFFFF;
 
 /* EVENTS SECTION */
 
-
 .event > h1 {
     display: flex;
     gap: 0.25em;
@@ -482,12 +473,13 @@ background: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 }
 
 .eventCardsWrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 75px;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
