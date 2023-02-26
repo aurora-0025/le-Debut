@@ -1,6 +1,6 @@
 .chatBubble {
     padding: max(20px, 2%);
-    width: clamp(280px, 50vw, 700px);
+    width: clamp(280px, 50vw, 550px);
     background-color: #42A5F5;
     border-radius: 0px 20px 20px 20px;
     position: relative;
@@ -20,6 +20,15 @@
     flex-direction: column;
     gap: 20px;
     justify-content: space-between;
+  }
+
+  .chatBubble > .content > p {
+    font-size: max(18px, 1vw);
+  }
+
+  .chatBubble > .content > b {
+    font-size: max(20px, 1vw);
+    font-weight: 900;
   }
 
   .chatBubble > .content > .buttonContainer {
