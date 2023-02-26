@@ -69,7 +69,7 @@ function Home() {
                 <div className='title'>
                     <h1>Not your average </h1>
                     <h1>
-                        <span>freshers event.</span>
+                        <span>freshers event</span>.
                     </h1>
                 </div>
                 <div className='player' >
