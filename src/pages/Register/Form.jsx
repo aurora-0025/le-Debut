@@ -189,6 +189,7 @@ function Form() {
     useEffect(() => {
         if(plan) {
             setPage(1);
+            window.scrollTo(0, 0);
 		    actions?.setBackgroundColor('#42a5f5');
         }
     }, [plan])

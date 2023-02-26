@@ -351,6 +351,7 @@ background: #FFFFFF;
         justify-content: center;
         align-items: center;
         text-align: center;
+        font-size: max(20px, 5vw);
     }
 
     .about1 > .title > .titleContent > h1:nth-of-type(1) {
@@ -362,13 +363,13 @@ background: #FFFFFF;
     }
 
     .about > .player > #wrap {
-        width: 400px;
-        height: 300px;
+        width: 320px;
+        height: 200px;
     }
 
     .about > .player > #wrap > iframe {
-        width: 380px;
-        height: 280px;
+        width: 300px;
+        height: 180px;
     }
     
     .about1 > .title > .titleContent > h1:nth-of-type(2) {
