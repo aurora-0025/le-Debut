@@ -7,9 +7,9 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("/assets/images/grain_texture.png");
-  mix-blend-mode: soft-light;
+  /* background-image: url("/assets/images/grain_texture.png");
+  mix-blend-mode: soft-light; */
   pointer-events: none;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   z-index: 99;
 }

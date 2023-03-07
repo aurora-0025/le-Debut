@@ -86,7 +86,7 @@ function Home() {
             </div>
 
             <div className='about1' id="speakers" ref={speakersRef}>
-                <img alt='' src={topLeftLight} className='lights' />
+                {/* <img alt='' src={topLeftLight} className='lights' /> */}
                 <div className='title'>
 				<div className="titleContent">
                     <h1>our stellar speakers </h1>
@@ -106,7 +106,7 @@ function Home() {
             </div>
           
             <div className='event'>
-                <img alt='' src={eyeoutlights} className='lights' />
+                {/* <img alt='' src={eyeoutlights} className='lights' /> */}
                 <h1>
                     keep an{' '}
                     <img id='eyesImg' src={eye} style={{ width: '60px', height: '70px' }} alt='' />{' '}
@@ -163,8 +163,8 @@ function Home() {
             </div>
 
             <div className='reviews'>
-            <img alt='' src={reviewTopLight} className='toplight' />
-            <img alt='' src={reviewBottomLight} className='bottomlight' />
+            {/* <img alt='' src={reviewTopLight} className='toplight' /> */}
+            {/* <img alt='' src={reviewBottomLight} className='bottomlight' /> */}
 
                 <h1>our past reviews</h1>
                 <div className='reviewWrapper'>
