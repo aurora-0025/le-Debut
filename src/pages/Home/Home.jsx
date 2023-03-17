@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import charsImage from '../../assets/images/headerLegoCharacters.png'
 import lego3brick from '../../assets/images/lego3brick.png'
 import eye from '../../assets/images/eye.png'
+import star from '../../assets/images/star.png'
+import star1 from '../../assets/images/star1.png'
 import stellar from '../../assets/images/stellar.png'
 import rectangle from '../../assets/images/Rectangle.png'
 import eyeoutlights from '../../assets/images/keepeyeoutlights.png'
@@ -98,6 +100,11 @@ function Home() {
                 
 				<div className="titleContent">
                  <h1>our stellar speakers</h1>  
+                </div>
+                <div className='stars'>
+                <img className='star2' src={star1} alt=''/>
+                  <img className='star1' src={star} alt=''/>
+                 
                 </div>
                 <div className='speakers'>
                 <SpeakerCard img={speaker1} />

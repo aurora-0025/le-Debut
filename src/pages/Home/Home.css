@@ -188,7 +188,7 @@
     color: #ffffff;
     margin-left: 30px;
     margin-bottom: 100px;
-    font-size: 50px;
+    font-size: 70px;
 }
 
 
@@ -273,6 +273,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-top: 80px;
     }
 
     .closeBar {
@@ -329,8 +330,8 @@ background: #FFFFFF;
     }
     
     
-    .about1 > .titleContent{
-
+    .about1 > .titleContent > h1{
+         font-size: 50px;
     }
 
     .about1 > .title > .titleContent > h1:nth-of-type(1) {
@@ -418,6 +419,7 @@ background: #FFFFFF;
     overflow-x: clip;
     z-index: 2;
     position: relative;
+    margin-top: 200px;
 }
 
 .speaker > h1 {
@@ -435,6 +437,28 @@ background: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
+}
+
+.stars{
+    position: relative;
+    
+}
+
+.star1{
+   position: absolute;
+width: 103px;
+height: 102px;
+left: 965px;
+top: -170px;
+}
+
+.star2{
+    position: absolute;
+width: 165px;
+height: 163px;
+left: 900px;
+top: -250px;
 }
 
 .speakerCard, .eventCard {
