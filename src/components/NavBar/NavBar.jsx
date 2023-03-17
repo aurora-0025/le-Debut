@@ -60,7 +60,7 @@ function NavBar() {
                     <a href='/'>Home</a>
                 </li>
                 <li onKeyDown={()=>executeScroll("speaker")} onClick={()=>executeScroll("speaker")}>Speakers</li>
-                <li onKeyDown={()=>executeScroll("sponsor")} onClick={()=>executeScroll("sponsor")}>Sponsers</li>
+                <li onKeyDown={()=>executeScroll("sponsor")} onClick={()=>executeScroll("sponsor")}>Sponsors</li>
                 <li className={`${activeLink === 'register'&& "activelink"}`}>
                     <a href='/register'>Register</a>
                 </li>
