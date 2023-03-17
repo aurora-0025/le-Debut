@@ -1,28 +1,4 @@
-.speakerCard > .speakerCardImg {
-    position: relative;
-    background-image: url("../../../../assets/images/speakerBg.png");
-    height: 300px;
-    width: 300px;
-}
-
-.speakerCard > .speakerCardImg > .speakerImg {
-    position: absolute;
-    height: 230px;
-    width: 220px;
-    filter: saturate(0);
-}
-
-.speakerCard  {
-    
-    text-align: center;
-    color: white;
-   
-}
-
-.speakerCard > h3 {
-    padding-top: 20px;
-}
-
-.speakerCard > h4 {
-    padding-bottom: 20px;
+.speakerCardImg{
+   width: 300px;
+   height: 500px;
 }

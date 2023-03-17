@@ -157,10 +157,28 @@
     position: relative;
 }
 
+.cloud1{
+    position: absolute;
+    width: 123.87px;
+    height: 73.03px;
+    left: 310.17px;
+    top: 40.29px;
+    z-index: -5;
+}
+
+.cloud2{
+    position: absolute;
+    width: 149.6px;
+    height: 88.2px;
+    left: 900px;
+    top: 170.33px;
+
+}
+
 .about1 {
-    height: max(100vh, 700px);
-    display: flex;
-    justify-content: space-evenly;
+    padding-left: 250px;
+    height: fit-content;
+    padding-top: 100px;
     background-color: #42a5f5;
     overflow-x: clip;
     position: relative;
@@ -179,42 +197,19 @@
     z-index: 1;
 }
 
-.about1 > .title {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.about1 > .player {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-}
 
-.about1 > .title > .titleContent > h1 {
+
+
+ .titleContent > h1 {
     font-weight: 700;
-    font-size: max(30px, 5vw);
-    line-height: 111.2%;
-    letter-spacing: -0.055em;
     color: #ffffff;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    font-size: 70px;
 }
 
-.about1 > .title > .titleContent > h1:nth-of-type(1) {
-    width: 390px;
-    color: white;
-}
 
-.about1 > .title > .titleContent > h1:nth-of-type(2) {
-    width: 500px;
-}
-
-.about1 > .title > .titleContent > h1 > span {
-    color: #1a1a1a;
-    font-weight: 700;
-}
 
 .legoChars {
     position: absolute;
@@ -236,6 +231,7 @@
 }
 
 .about > .title > h1 {
+    
     font-weight: 700;
     font-size: max(30px, 5vw);
     line-height: 111.2%;
@@ -291,17 +287,45 @@
         flex: 1;
     }
 
+    .about >.title> p{
+        color: white;
+        margin-top: 20px;
+    }
+
+    .star{
+        margin-left:-100px;
+    }
+
+    .star3{
+        position: absolute;
+        width: 123px;
+        height: 121.51px;
+        left: 66px;
+        top: 65px;
+    }
+
+    .star4{
+        position: absolute;
+        width: 76.78px;
+        height: 76.04px;
+        left: 111.47px;
+        top: 123.15px;
+    
+    }
+
     .about1 {
         margin-left: -150px;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-top: 80px;
     }
 
     .closeBar {
         display: block;
     }
-
+  
+    
     
    .about1 .image{
         position: relative;
@@ -336,13 +360,18 @@ background: #FFFFFF;
         text-align: center;
     }
 
+    .about .title{
+        margin-top: 100px;
+        font-size: 30px;
+    }
+
     .about1 {
-        padding: 100px;
+        margin-left: -180px;
         flex-direction: column;
         justify-content: center;
         gap: 30px;
         align-items: center;
-        height:80vh;
+        height:fit-content;
         margin-top: 80px;
     }
 
@@ -350,14 +379,10 @@ background: #FFFFFF;
         display: none;
     }
     
-
-    .about1 > .title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: max(20px, 5vw);
+    
+    .about1 > .titleContent > h1{
+         font-size: 50px;
+         
     }
 
     .about1 > .title > .titleContent > h1:nth-of-type(1) {
@@ -366,6 +391,11 @@ background: #FFFFFF;
 
     .about > .title > h1:nth-child(2) {
         width: 100%;
+    }
+
+    .about >.title> p{
+        color: white;
+        margin-top: 20px;
     }
 
     .about > .player > #wrap {
@@ -377,9 +407,34 @@ background: #FFFFFF;
         width: 300px;
         height: 180px;
     }
+
+    .cloud1{
+        display: none;
+    }
+    
+    
     
     .about1 > .title > .titleContent > h1:nth-of-type(2) {
         width: 100%;
+    }
+
+
+
+    .star3{
+        position: absolute;
+        width: 123px;
+        height: 121.51px;
+        left: 40px;
+        top: 50px;
+    }
+
+    .star4{
+        position: absolute;
+        width: 76.78px;
+        height: 76.04px;
+        left: 90.47px;
+        top: 100.15px;
+        
     }
 
     .legoChars {
@@ -391,26 +446,8 @@ background: #FFFFFF;
         font-size: max(60px, 6.2vw);
        
     }
-    
-    .about1 .image{
-        position: relative;
-        top: 0;
-        left:50px;
-        margin-right: 100px;
-        margin-bottom: 180px;
-        
-    }
-    .about1.player{
-        position: absolute;
-        top:200px;
-    }
-    .playerin{
-        position:absolute;
-        top:280px;
-        left:140px;
-        
-    }
 
+    
 
     .landing{
         margin-bottom: -50px;
@@ -460,6 +497,7 @@ background: #FFFFFF;
     overflow-x: clip;
     z-index: 2;
     position: relative;
+    margin-top: 200px;
 }
 
 .speaker > h1 {
@@ -471,6 +509,34 @@ background: #FFFFFF;
     font-size: max(30px, 5.5vw);
     line-height: 102px;
     color: #FFFFFF;
+}
+
+.speakers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.stars{
+    position: relative;
+    
+}
+
+.star1{
+   position: absolute;
+width: 103px;
+height: 102px;
+left: 965px;
+top: -170px;
+}
+
+.star2{
+    position: absolute;
+width: 165px;
+height: 163px;
+left: 900px;
+top: -250px;
 }
 
 .speakerCard, .eventCard {
@@ -502,13 +568,17 @@ background: #FFFFFF;
         scroll-snap-align: start;
         width: 289px;
     }
+
+    .speakers{
+        flex-direction: column;
+    }
 }
 
 /* EVENTS SECTION */
 
 .event {
     height: max(100vh, 100%);
-    padding: 10%;
+    
     display: flex;
     flex-direction: column;
     background-color: #1a1a1a;
@@ -537,6 +607,8 @@ background: #FFFFFF;
     font-size: max(30px, 5.5vw);
     line-height: 102px;
     color: #FFFFFF;
+    margin-left: 120px;
+    margin-top: 120px;
 }
 
 .eventsCardsContainer {
@@ -623,6 +695,9 @@ background: #FFFFFF;
 @media screen and (max-width: 900px) {
     .eventCardsWrapper {
         gap: 10px;
+    }
+    .event h1{
+        margin-left: 10px;
     }
     .reviews > h1{
         padding: 40px  0;
