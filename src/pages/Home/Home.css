@@ -157,7 +157,23 @@
     position: relative;
 }
 
+.cloud1{
+    position: absolute;
+    width: 123.87px;
+    height: 73.03px;
+    left: 310.17px;
+    top: 40.29px;
+    z-index: -5;
+}
 
+.cloud2{
+    position: absolute;
+    width: 149.6px;
+    height: 88.2px;
+    left: 900px;
+    top: 170.33px;
+
+}
 
 .about1 {
     padding-left: 250px;

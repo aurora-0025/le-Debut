@@ -6,6 +6,8 @@ import star from '../../assets/images/star.png'
 import star1 from '../../assets/images/star1.png'
 import star3 from '../../assets/images/star3.png'
 import star4 from '../../assets/images/star.png'
+import cloud1 from '../../assets/images/cloud1.png'
+import cloud2 from '../../assets/images/cloud2.png'
 import stellar from '../../assets/images/stellar.png'
 import rectangle from '../../assets/images/Rectangle.png'
 import eyeoutlights from '../../assets/images/keepeyeoutlights.png'
@@ -79,7 +81,8 @@ function Home() {
                         <div className='btnHole' />
                     </a>
                 </div>
-
+                <img src={cloud1} alt='' className='cloud1'/>
+                <img src={cloud2} alt='' className='cloud2'/>
                 <img alt='' src={charsImage} className='legoChars' />
             </div>
             <div className='about'>
