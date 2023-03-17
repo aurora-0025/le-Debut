@@ -714,6 +714,7 @@ top: -250px;
 
 .event * {
     z-index: 2;
+    flex: 1 1 1;
 }
 
 .event > .lights {
