@@ -8,9 +8,17 @@ import eyeoutlights from '../../assets/images/keepeyeoutlights.png'
 import reviewTopLight from '../../assets/images/reviewTopLight.png'
 import topLeftLight from '../../assets/images/lighttopleft.png'
 import reviewBottomLight from '../../assets/images/reviewBottomLight.png'
-
+import speaker1 from '../../assets/images/speaker1.png';
+import speaker2 from '../../assets/images/speaker2.png';
+import speaker3 from '../../assets/images/speaker3.png';
+import speaker4 from '../../assets/images/speaker4.png';
+import speaker5 from '../../assets/images/speaker5.png';
+import speaker6 from '../../assets/images/speaker6.png';
+import speaker7 from '../../assets/images/speaker7.png';
+import speaker8 from '../../assets/images/speaker8.png';
+import speaker9 from '../../assets/images/speaker9.png';
 import './Home.css'
-import speakersData from './Components/Speakers/speakersData'
+
 import reviewsData from './Components/Reviews/reviewData'
 import SpeakerCard from './Components/Speakers/SpeakerCard'
 import ChatBubble from './Components/Reviews/ChatBubble'
@@ -87,24 +95,24 @@ function Home() {
 
             <div className='about1' id="speakers" ref={speakersRef}>
                 {/* <img alt='' src={topLeftLight} className='lights' /> */}
-                <div className='title'>
+                
 				<div className="titleContent">
-                    <h1>our stellar speakers </h1>
-                    <h1>
-                        <span>to be unlocked soon</span>.
-                    </h1>
-					</div>
+                 <h1>our stellar speakers</h1>  
                 </div>
-                <div className='image'>
-                <div className='player'>
-                    <img src={stellar} alt='' />
+                <div className='speakers'>
+                <SpeakerCard img={speaker1} />
+                <SpeakerCard img={speaker2}/>
+                <SpeakerCard img={speaker3}/>
+                <SpeakerCard img={speaker4}/>
+                <SpeakerCard img={speaker5}/>
+                <SpeakerCard img={speaker6}/>
+                <SpeakerCard img={speaker7}/>
+                <SpeakerCard img={speaker8}/>
+                <SpeakerCard img={speaker9}/>
                 </div>
-                <div className='playerin'>
-                    <img src={rectangle} alt='' />
-                </div>
-                </div>
-            </div>
-          
+                
+           
+          </div>
             <div className='event'>
                 {/* <img alt='' src={eyeoutlights} className='lights' /> */}
                 <h1>
@@ -143,24 +151,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className='about1 ' id='sponsors' ref={sponsorsRef}>
-                <div className='title'>
-					<div className="titleContent">
-						<h1>our sponsors </h1>
-						<h1>
-							<span>to be unlocked soon</span>.
-						</h1>
-					</div>
-                </div>
-                <div className='image'>
-                <div className='player'>
-                    <img src={stellar} alt='' />
-                </div>
-                <div className='playerin'>
-                    <img src={rectangle} alt='' />
-                </div>
-                </div>
-            </div>
+            
 
             <div className='reviews'>
             {/* <img alt='' src={reviewTopLight} className='toplight' /> */}
