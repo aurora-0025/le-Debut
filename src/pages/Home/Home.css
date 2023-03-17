@@ -162,8 +162,8 @@
 
 .about .title{
     
-   padding: 6%;
-    
+   padding: 15%;
+   
 }
 
 .cloud1{
@@ -272,7 +272,7 @@
     height: 300px;
     -moz-border-radius: 10px;
     position: relative;
-    margin-right: 7%;
+    margin-right: 0%;
 }
 
 .about > .player > #wrap {
