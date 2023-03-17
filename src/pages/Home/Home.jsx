@@ -111,7 +111,7 @@ function Home() {
             <div className='about1' id="speakers" ref={speakersRef}>
                 {/* <img alt='' src={topLeftLight} className='lights' /> */}
                 
-				<div className="titleContent">
+				<div className="titleContent1">
                  <h1>our stellar speakers</h1>  
                 </div>
                 <div className='stars'>
@@ -171,7 +171,24 @@ function Home() {
                 </div>
             </div>
 
-            
+            <div className='abouts ' id='sponsors' ref={sponsorsRef}>
+                <div className='title'>
+					<div className="titleContent">
+						<h1>our sponsors </h1>
+						<h1>
+							<span>to be unlocked soon</span>.
+						</h1>
+					</div>
+                </div>
+                <div className='image'>
+                <div className='player'>
+                    <img src={stellar} alt='' />
+                </div>
+                <div className='playerin'>
+                    <img src={rectangle} alt='' />
+                </div>
+                </div>
+            </div>
 
             <div className='reviews'>
             {/* <img alt='' src={reviewTopLight} className='toplight' /> */}
