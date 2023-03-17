@@ -170,9 +170,9 @@
     position: absolute;
     width: 149.6px;
     height: 88.2px;
-    left: 900px;
-    top: 170.33px;
-
+    left: 75%;
+    top: 2%;
+    z-index:5;
 }
 
 .about1 {
