@@ -4,6 +4,8 @@ import lego3brick from '../../assets/images/lego3brick.png'
 import eye from '../../assets/images/eye.png'
 import star from '../../assets/images/star.png'
 import star1 from '../../assets/images/star1.png'
+import star3 from '../../assets/images/star3.png'
+import star4 from '../../assets/images/star.png'
 import stellar from '../../assets/images/stellar.png'
 import rectangle from '../../assets/images/Rectangle.png'
 import eyeoutlights from '../../assets/images/keepeyeoutlights.png'
@@ -81,6 +83,12 @@ function Home() {
                 <img alt='' src={charsImage} className='legoChars' />
             </div>
             <div className='about'>
+            <div className='star'>
+                <img className='star3' src={star3} alt=''/>
+                  <img className='star4' src={star4} alt=''/>
+                 
+                </div>
+                
                 <div className='title'>
                     <h1>Not your average </h1>
                     <h1>
