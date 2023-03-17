@@ -160,8 +160,10 @@
     
 }
 
-.title{
-    margin-right: 70px;
+.about .title{
+    
+   padding: 6%;
+    
 }
 
 .cloud1{
@@ -183,13 +185,13 @@
 }
 
 .about1 {
-    padding-left: 300px;
+    padding: 22%;
     height: fit-content;
     padding-top: 30px;
     background-color: #42a5f5;
     overflow-x: clip;
     position: relative;
-    padding-right: 50px;
+    padding-bottom: 30px;
 }
 
 .about1 * {
@@ -270,6 +272,7 @@
     height: 300px;
     -moz-border-radius: 10px;
     position: relative;
+    margin-right: 7%;
 }
 
 .about > .player > #wrap {
@@ -661,7 +664,7 @@ background: #FFFFFF;
 .speakers{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+    gap: 50px;
 }
 
 .stars{
