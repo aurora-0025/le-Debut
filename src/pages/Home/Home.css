@@ -298,6 +298,7 @@
     overflow-x: clip;
     position: relative;
     padding-right: 50px;
+    
 }
 
 .abouts * {
@@ -310,6 +311,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 6%;
 }
 
 .abouts > .player {
