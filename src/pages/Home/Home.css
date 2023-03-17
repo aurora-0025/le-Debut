@@ -142,11 +142,13 @@
 
 /* ABOUT SECTION */
 
+
+
 .about {
     z-index: 2;
     height: max(100vh, 500px);
     margin-top: 312px;
-    padding: 10%;
+    padding: 9%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -155,6 +157,11 @@
     overflow-x: clip;
     z-index: 2;
     position: relative;
+    
+}
+
+.title{
+    margin-right: 70px;
 }
 
 .cloud1{
@@ -176,9 +183,9 @@
 }
 
 .about1 {
-    padding-left: 250px;
+    padding-left: 300px;
     height: fit-content;
-    padding-top: 100px;
+    padding-top: 30px;
     background-color: #42a5f5;
     overflow-x: clip;
     position: relative;
@@ -291,6 +298,7 @@
     overflow-x: clip;
     position: relative;
     padding-right: 50px;
+    
 }
 
 .abouts * {
@@ -303,6 +311,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 6%;
 }
 
 .abouts > .player {
@@ -370,6 +379,7 @@
         color: white;
         margin-top: 20px;
     }
+    
 
     .star{
         margin-left:-100px;
@@ -423,6 +433,8 @@
         left:140px
     }
 
+    
+
  /*   .playerin{
         position: absolute;
 width: 23px;
@@ -453,6 +465,8 @@ background: #FFFFFF;
         height:80vh;
         margin-top: 80px;
     }
+
+    
 
     .abouts > .title {
         margin-left: -60px;
@@ -489,7 +503,7 @@ background: #FFFFFF;
     }
 
     .about1 {
-        margin-left: -180px;
+        margin-left: -230px;
         flex-direction: column;
         justify-content: center;
         gap: 30px;
@@ -536,10 +550,18 @@ background: #FFFFFF;
     }
     
     
+    .cloud2{
+        display: none;
+    }
     
     .about1 > .title > .titleContent > h1:nth-of-type(2) {
         width: 100%;
     }
+
+   .about .title{
+    margin-left: 20%;
+    font-size: 20px;
+   }
 
 
 
@@ -570,7 +592,9 @@ background: #FFFFFF;
        
     }
 
-    
+    .titleContent1 h1{
+        font-size: 50px;
+    }
 
     .landing{
         margin-bottom: -50px;
@@ -733,8 +757,8 @@ top: -250px;
     font-size: max(30px, 5.5vw);
     line-height: 102px;
     color: #FFFFFF;
-    margin-left: 50px;
-    margin-top: 120px;
+    margin-left: 0px;
+   
 }
 
 .eventsCardsContainer {
