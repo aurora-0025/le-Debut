@@ -86,7 +86,9 @@ function Home() {
                     <h1>
                         <span>freshers event</span>.
                     </h1>
+                    <p>@MBCET Campus</p>
                 </div>
+                
                 <div className='player' >
                     <div id="wrap">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/wCmt2Oa9Olk" title="promo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullscreen/>
