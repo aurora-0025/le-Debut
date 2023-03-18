@@ -1,4 +1,27 @@
-.speakerCardImg{
-   width: 300px;
-   height: 500px;
+.speakerCard > .speakerCardImg >img {
+   width: 90%;
+   margin-bottom:10%
+}
+
+.speakerCard{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+  
+}
+
+.speakerCard h1 {
+   color: white;
+   text-align: center;
+   
+}
+
+.speakerCard h3 {
+   width: 80%;
+   height: 40%;
+   margin-top: 2%;
+   color: white;
+   text-align: center;
 }
