@@ -68,3 +68,13 @@
     padding-bottom: 20px;
     font-weight: 700;
 }
+
+
+@media screen and (max-width: 900px) {
+    .eventCard h3{
+        text-align: center;
+    }
+    .eventCard h4{
+        text-align: center;
+    }
+}

@@ -223,7 +223,7 @@
 .titleContent1 > h1 {
     font-weight: 700;
     color: #ffffff;
-    margin-left: 0px;
+    margin-left: 0%;
     margin-bottom: 100px;
     font-size: 70px;
 }
@@ -857,8 +857,13 @@ top: -250px;
 }
 
 @media screen and (max-width: 900px) {
+    .eventsCardsContainer{
+        margin: 0;
+        padding: 0;
+    }
     .eventCardsWrapper {
         gap: 10px;
+       
     }
     .event h1{
         margin-left: 10px;
