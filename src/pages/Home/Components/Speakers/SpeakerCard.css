@@ -1,6 +1,6 @@
 .speakerCard > .speakerCardImg >img {
    width: 90%;
-   margin-bottom:10%
+   margin-bottom:3%
 }
 
 .speakerCard{
@@ -15,13 +15,13 @@
 .speakerCard h1 {
    color: white;
    text-align: center;
-   
+   font-weight: 550;
 }
 
 .speakerCard h3 {
    width: 80%;
    height: 40%;
-   margin-top: 2%;
+   margin-top: 1%;
    color: white;
    text-align: center;
 }
