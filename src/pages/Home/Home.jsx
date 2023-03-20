@@ -5,7 +5,6 @@ import eye from '../../assets/images/eye.png'
 import star from '../../assets/images/star.png'
 import star1 from '../../assets/images/star1.png'
 import star3 from '../../assets/images/star3.png'
-import star4 from '../../assets/images/star.png'
 import cloud1 from '../../assets/images/cloud1.png'
 import cloud2 from '../../assets/images/cloud2.png'
 import stellar from '../../assets/images/stellar.png'
@@ -88,7 +87,7 @@ function Home() {
             <div className='about'>
             <div className='star'>
                 <img className='star3' src={star3} alt=''/>
-                  <img className='star4' src={star4} alt=''/>
+                  <img className='star4' src={star} alt=''/>
                  
                 </div>
                 
@@ -175,7 +174,7 @@ function Home() {
             <div className='abouts ' id='sponsors' ref={sponsorsRef}>
                 <div className='title'>
 					<div className="titleContent">
-						<h1>our sponsors </h1>
+						<h1>schedule </h1>
 						<h1>
 							<span>to be unlocked soon</span>.
 						</h1>
