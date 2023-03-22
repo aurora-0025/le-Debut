@@ -101,7 +101,7 @@ function Home() {
                 
                 <div className='player' >
                     <div id="wrap">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wCmt2Oa9Olk" title="promo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullscreen/>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wCmt2Oa9Olk" title="promo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/>
                         {/* <iframe title="promo" src="https://drive.google.com/file/d/1f8jPcM92jHkDUjmy0Ta0GpkikBcFKki3/preview" width="440" height="280" allow="autoplay" /> */}
                     </div>
                 </div>
@@ -120,15 +120,15 @@ function Home() {
                  
                 </div>
                 <div className='speakers'>
-                <SpeakerCard img={speaker1} name='Advaith U' desc='Friends of Figma Regional Lead, India'/>
-                <SpeakerCard img={speaker2} name='Advin Netto' desc='UX Designer @Google' />
-                <SpeakerCard img={speaker3} name='Riya P Mathew ' desc='Community Manager Intern @FOSS United'/>
-                <SpeakerCard img={speaker4} name='Salman Fariz' desc='Creative Director at KDISC | Strategy Consultant @Gtech MuLearn'/>
-                <SpeakerCard img={speaker5} name='Anina Elizabeth' desc='Co-Founder @Olam & Founder @Doodleholic'/>
-                <SpeakerCard img={speaker6} name='Navaneeth Venu ' desc='Graphic Designer'/>
-                <SpeakerCard img={speaker7} name='Rohith TP' desc='CTO @Trebuchet'/>
-                <SpeakerCard img={speaker8} name='Mekha Anil ' desc='HR @Accubits'/>
-                <SpeakerCard img={speaker9} name='Joshin Samuel' desc='Design Generalist @Cosmic Wealth'/>
+                    <SpeakerCard img={speaker1} name='Advaith U' desc='Friends of Figma Regional Lead, India'/>
+                    <SpeakerCard img={speaker2} name='Advin Netto' desc='UX Designer @Google' />
+                    <SpeakerCard img={speaker3} name='Riya P Mathew ' desc='Community Manager Intern @FOSS United'/>
+                    <SpeakerCard img={speaker4} name='Salman Fariz' desc='Creative Director at KDISC | Strategy Consultant @Gtech MuLearn'/>
+                    <SpeakerCard img={speaker5} name='Anina Elizabeth' desc='Co-Founder @Olam & Founder @Doodleholic'/>
+                    <SpeakerCard img={speaker6} name='Navaneeth Venu ' desc='Graphic Designer'/>
+                    <SpeakerCard img={speaker7} name='Rohith TP' desc='CTO @Trebuchet'/>
+                    <SpeakerCard img={speaker8} name='Mekha Anil ' desc='HR @Accubits'/>
+                    <SpeakerCard img={speaker9} name='Joshin Samuel' desc='Design Generalist @Cosmic Wealth'/>
                 </div>
                 
            

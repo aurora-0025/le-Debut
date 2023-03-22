@@ -2,13 +2,12 @@
    width: 90%;
 }
 
-.speakerCard{
+.speakerCard {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    text-align: center;
-  
 }
 
 .speakerCard h1 {

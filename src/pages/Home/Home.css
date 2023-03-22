@@ -146,7 +146,7 @@
 
 .about {
     z-index: 2;
-    height: max(100vh, 500px);
+    height: max(100vh, 600px);
     margin-top: 312px;
     padding: 9%;
     display: flex;
@@ -161,7 +161,6 @@
 }
 
 .about .title{
-    
    padding: 15%;
    
 }
@@ -735,13 +734,13 @@ top: -250px;
 
 .event {
     height: max(100vh, 100%);
-    padding: 100px;
     display: flex;
     flex-direction: column;
     background-color: #1a1a1a;
     overflow-x: clip;
     z-index: 2;
     position: relative;
+    padding: 100px;
 }
 
 .event * {
@@ -762,7 +761,7 @@ top: -250px;
     align-items: center;
     padding-bottom: 10%;
     font-weight: 700;
-    font-size: max(30px, 5.5vw);
+    font-size: max(22px, 5.5vw);
     line-height: 102px;
     color: #FFFFFF;
     margin-left: 0px;
@@ -857,16 +856,18 @@ top: -250px;
 }
 
 @media screen and (max-width: 900px) {
-    .eventsCardsContainer{
-        margin: 0;
+    .event {
         padding: 0;
     }
     .eventCardsWrapper {
         gap: 10px;
-       
+        margin: 0;
+        padding: 0;
     }
-    .event h1{
-        margin-left: 10px;
+    .event > h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;        
     }
     .reviews > h1{
         padding: 40px  0;
