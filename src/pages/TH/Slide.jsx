@@ -79,31 +79,43 @@ function Slide() {
                 </div>
             ) : (
                 <div>
-                    <div className='player-wrapper'>
-                        <div className='nonclickable' />
-                        <ReactPlayer
-                            className='react-player'
-                            playing
-                            url='https://youtu.be/dQw4w9WgXcQ'
-                            onProgress={(p) => trackProgress(p)}
-                            stopOnUnmount={true}
-                            progressInterval={10000}
-                            width='100%'
-                            height='100%'
-                            config={{
-                                youtube: {
-                                    playerVars: {
-                                        autoplay: 1,
-                                        controls: 0,
-                                        autohide: 1,
-                                        modestbranding: 1,
-                                        wmode: 'opaque',
-                                        origin: 'http://localhost:3000',
-                                    },
-                                },
-                            }}
-                        />
-                    </div>
+                    (
+                    {
+                        <div>
+                            (
+                            {showClue ? (
+                                <div>Hello</div>
+                            ) : (
+                                <div className='player-wrapper'>
+                                    <div className='nonclickable' />
+                                    <ReactPlayer
+                                        className='react-player'
+                                        playing
+                                        url='https://youtu.be/dQw4w9WgXcQ'
+                                        onProgress={(p) => trackProgress(p)}
+                                        stopOnUnmount={true}
+                                        progressInterval={10000}
+                                        width='100%'
+                                        height='100%'
+                                        config={{
+                                            youtube: {
+                                                playerVars: {
+                                                    autoplay: 1,
+                                                    controls: 0,
+                                                    autohide: 1,
+                                                    modestbranding: 1,
+                                                    wmode: 'opaque',
+                                                    origin: 'http://localhost:3000',
+                                                },
+                                            },
+                                        }}
+                                    />
+                                </div>
+                            )}
+                            )
+                        </div>
+                    }
+                    )
                 </div>
             )}
         </>

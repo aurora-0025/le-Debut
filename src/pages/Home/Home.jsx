@@ -75,10 +75,10 @@ function Home() {
                         <h4>25th & 26th March 2023</h4>
                         <img className='closeBar' src={lego3brick} alt='' />
                     </div>
-                    <div className={`registerButton ${buttonHighlight&&'highlight'}`} type='button'>
-                        Registrations Closed <div className='btnHole' />
+                    <a href={"/register"} className={`registerButton ${buttonHighlight&&'highlight'}`} type='button'>
+                        Grab Your Spot Now <div className='btnHole' />
                         <div className='btnHole' />
-                    </div>
+                    </a>
                 </div>
                 <img src={cloud1} alt='' className='cloud1'/>
                 <img src={cloud2} alt='' className='cloud2'/>
