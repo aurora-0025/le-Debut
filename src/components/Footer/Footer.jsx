@@ -17,7 +17,7 @@ function Footer() {
             <h3>Quick Links</h3>
             <a href="/">Home</a>
             <p onKeyDown={executeScroll} onClick={executeScroll}>Speakers</p>
-            <a href="/register">Register</a>
+            {/* <a href="/register">Register</a> */}
             <a href="/">Website</a>
         </div>
         <div className='findUs'>

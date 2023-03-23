@@ -9,6 +9,7 @@ import Home from './pages/Home/Home'
 import Footer from './components/Footer/Footer'
 import Badge from './pages/Badge/Badge'
 import { AppContext } from './context/AppContext'
+import Slide from './pages/TH/Slide'
 
 function App() {
     const { store, actions } = useContext(AppContext)
@@ -23,15 +24,14 @@ function App() {
 
     return (
         <div className='App' style={{ backgroundColor: bgColor }}>
-            <div className='overlay' />
-            <NavBar />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/badge' element={<Badge />} />
-                <Route path='/register' element={<Form />} />
-                <Route path='*' element={<Home />} />
-            </Routes>
-            <Footer />
+            <div className='overlay' /> 
+                    <Routes>
+                        <Route path='/' element={<><NavBar /><Home /><Footer /></>} />
+                        <Route path='/badge' element={<><NavBar /><Badge /><Footer /></>} />
+                        {/* <Route path='/register' element={<><NavBar /><Form /><Footer /></>} /> */}
+                        <Route path='*' element={<><NavBar /><Home /><Footer /></>} />
+                        <Route path='/slide' element={<Slide />} />
+                    </Routes>                
             {/* <Form /> */}
         </div>
     )

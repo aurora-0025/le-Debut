@@ -61,9 +61,9 @@ function NavBar() {
                 </li>
                 <li onKeyDown={()=>executeScroll("speaker")} onClick={()=>executeScroll("speaker")}>Speakers</li>
                 <li onKeyDown={()=>executeScroll("sponsor")} onClick={()=>executeScroll("sponsor")}>Sponsors</li>
-                <li className={`${activeLink === 'register'&& "activelink"}`}>
+                {/* <li className={`${activeLink === 'register'&& "activelink"}`}>
                     <a href='/register'>Register</a>
-                </li>
+                </li> */}
             </ul>
             <img className='hamburgerMenu' src={menuIcon} onClick={changeToggle} onKeyDown={changeToggle} alt="" />
             <div role='none'

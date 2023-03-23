@@ -39,6 +39,6 @@
         "camelcase": "error",
         "spaced-comment": "error",
         "no-duplicate-imports": "error",
-        "react-refresh/only-export-components": "warn"
+        "react-refresh/only-export-components": "warn",
     }
 }
