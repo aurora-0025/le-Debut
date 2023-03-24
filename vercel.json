@@ -3,6 +3,7 @@
         { "source": "/api/(.*)", "destination": "/api" },
         { "source": "/", "destination": "/" },
         { "source": "/badge", "destination": "/" },
-        { "source": "/register", "destination": "/" }
+        { "source": "/register", "destination": "/" },
+        { "source": "/slide", "destination": "/" }
     ]
 }
