@@ -76,7 +76,7 @@ function Home() {
                         <img className='closeBar' src={lego3brick} alt='' />
                     </div>
                     <div className={`registerButton ${buttonHighlight&&'highlight'}`} type='button'>
-                        Registraions Closed <div className='btnHole' />
+                        Registrations Closed <div className='btnHole' />
                         <div className='btnHole' />
                     </div>
                 </div>

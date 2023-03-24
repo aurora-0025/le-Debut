@@ -29,8 +29,8 @@ function App() {
                         <Route path='/' element={<><NavBar /><Home /><Footer /></>} />
                         <Route path='/badge' element={<><NavBar /><Badge /><Footer /></>} />
                         {/* <Route path='/register' element={<><NavBar /><Form /><Footer /></>} /> */}
-                        <Route path='*' element={<><NavBar /><Home /><Footer /></>} />
                         <Route path='/slide' element={<Slide />} />
+                        <Route path='*' element={<><NavBar /><Home /><Footer /></>} />
                     </Routes>                
             {/* <Form /> */}
         </div>
