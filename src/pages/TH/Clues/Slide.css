@@ -57,6 +57,16 @@
 	width: 100%;
 }
 
+.player-wrapper > p {
+	position: absolute;
+	z-index: 99;
+	bottom: 0px;
+}
+
+.clueContainer {
+	text-transform: lowercase;
+}
+
 .transition-wrapper {
 	border-radius: 20px;
 	pointer-events:none;  

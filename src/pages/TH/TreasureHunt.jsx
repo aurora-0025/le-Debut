@@ -1,6 +1,5 @@
 import React from 'react'
 import './TreasureHunt.css'
-import RiddlerImg from '../../assets/images/riddler.png'
 
 function TreasureHunt({ children }) {
     return (

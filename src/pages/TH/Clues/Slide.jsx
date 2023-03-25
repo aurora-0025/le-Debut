@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 
 import './Slide.css'
-import TreasureHunt from './TreasureHunt'
+import TreasureHunt from '../TreasureHunt'
 
-function Slide() {
+function Slide({clue}) {
     // ['1', '2', '3', '4', '5', '6', '7', '8', 'empty'];
     // const [tiles, setTiles] = useState(['1', '2', '3', '4', '5', '6', '7', 'empty', '8'])
     const [tiles, setTiles] = useState(['8', '6', '4', '3', 'empty', '1', '2', '7', '5'])
@@ -24,7 +24,7 @@ function Slide() {
     }
 
     function trackProgress(progress) {
-        if (progress.playedSeconds > 30) {
+        if (progress.playedSeconds > 60) {
             setShowTransition(true);
             setTimeout(() => {
                 setShowClue(true);
@@ -101,16 +101,17 @@ function Slide() {
                 ) : (
                         <>
                             {showClue ? (
-                                <div className="clueContain">
-                                    <div>Some clue here.</div>
+                                <div className="clueContainer">
+                                    <div>{clue}</div>
                                 </div>
                             ) : (
                                 <div className='player-wrapper'>
+                                    <p>WARNING: DO NOT CLOSE</p>
                                     <div className='nonclickable' />
                                     <ReactPlayer
                                         className='react-player'
                                         playing
-                                        url='https://youtu.be/dQw4w9WgXcQ'
+                                        url='https://drive.google.com/u/0/uc?id=185v__vjs3xRH7cYuQ1BAwr0aUl0gPywf&export=download'
                                         onProgress={(p) => trackProgress(p)}
                                         stopOnUnmount={true}
                                         progressInterval={10000}

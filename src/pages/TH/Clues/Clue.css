@@ -1,0 +1,44 @@
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cursor {
+    content: '';
+    margin-left: 5px;
+    /* Remove display: inline-block if not required to be on the same line as text etc */
+    display: inline-block;
+    background-color: #008000;
+    vertical-align: top;
+    width: 10px;
+    /* Set height to the line height of .text */
+    height: 20px;
+    /* 
+		Animation paramaters:
+		blink = animation-name, 
+		1s = animation-duration, 
+		step-end = animation-timing-function,
+		infinite = animation-iteration-count
+		*/
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}

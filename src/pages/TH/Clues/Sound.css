@@ -1,0 +1,63 @@
+.transition-wrapper {
+	border-radius: 20px;
+	pointer-events:none;  
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	z-index: 2;
+	background-color: #0c0c0c;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.black {
+	opacity: 100%;
+}
+.no-bg {
+	opacity: 0;
+}
+
+.clueContainer {
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 10px;
+	height: 100%;
+	width: 100%;
+	font-size: 15px;
+}
+
+.soundIcon > svg {
+	width: 40px;
+	height: 40px;
+}
+
+.soundIcon {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	pointer-events: none;
+	align-items: center;
+	pointer-events: none;
+}
+
+.buttonContainer > button, .buttonContainer > a {
+	pointer-events: auto;
+	border: none;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	padding: 10px;
+	background-color: transparent;
+	animation: textShadow 2s linear infinite;
+    text-decoration: none;
+	color: #0c0c0c;
+}
