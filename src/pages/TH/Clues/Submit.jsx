@@ -40,7 +40,7 @@ function Submit({clue}) {
             ['code1', 'code2', 'baldski', 'swartz', 'blue69', 'xavier', 'usoclose'],
             ['code1', 'code2', 'oogway', 'mrbeast', 'grey50', 'strange', 'usoclose'],
         ]
-        const answerString = answer.sort().toString();
+        const answerString = answer.toString();
         for (const soln of answerKeys) {
             if (soln.toString() == answerString) {
                 correct = true
