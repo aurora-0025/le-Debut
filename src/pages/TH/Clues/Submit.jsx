@@ -33,7 +33,6 @@ function Submit({clue}) {
         setError(false)
         let answer = []
         Object.values(values).map((val) => answer.push(val.toLowerCase()))
-        answer.sort()
         let correct = false
         let answerKeys = [
             ['code1', 'code2', 'pepe', 'coldplay', 'black12', 'wanda', 'usoclose'],
@@ -46,7 +45,6 @@ function Submit({clue}) {
                 correct = true
             }
             else if (answerString == ['code1', 'code2', 'code3', 'code4', 'code5', 'code6', 'code7'].toString()) {
-                console.log("yes");
                 navigate(`/sikeuthot`);
             }
         }
