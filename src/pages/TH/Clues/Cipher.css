@@ -1,6 +1,6 @@
 .imgContainer > img {
 	width: 180px;
-	filter: saturate(1000%) hue-rotate(60deg)
+	/* filter: saturate(1000%) */ hue-rotate(60deg)
 }
 
 .imgContainer {
